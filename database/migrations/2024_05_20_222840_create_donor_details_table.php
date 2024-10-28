@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string("hiv_status");
             $table->string("pcv")->nullable();
             $table->string("lga");
-            $table->foreignIdFor(State::class)->constrained();
+            $table->foreignIdFor(State::class);
             $table->string("gender");
             $table->string("home_address");
             $table->string("reason");

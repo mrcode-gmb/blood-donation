@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignIdFor(User::class)->constrained();
             $table->string("hostpital_name");
             $table->string("moto_name");
-            $table->foreignIdFor(Lga::class)->constrained();
+            $table->foreignIdFor(Lga::class);
             $table->string('address');
             $table->string('postal_code');
 
