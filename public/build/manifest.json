@@ -1,0 +1,335 @@
+{
+  "_AuthenticatedLayout-CHzYvDbX.js": {
+    "file": "assets/AuthenticatedLayout-CHzYvDbX.js",
+    "name": "AuthenticatedLayout",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_GuestLayout-DyIzhdse.js": {
+    "file": "assets/GuestLayout-DyIzhdse.js",
+    "name": "GuestLayout",
+    "imports": [
+      "__plugin-vue_export-helper-DlAUqK2U.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_PrimaryButton-BL5A1dSu.js": {
+    "file": "assets/PrimaryButton-BL5A1dSu.js",
+    "name": "PrimaryButton",
+    "imports": [
+      "__plugin-vue_export-helper-DlAUqK2U.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_TextInput-DvLcyDE7.js": {
+    "file": "assets/TextInput-DvLcyDE7.js",
+    "name": "TextInput",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "__plugin-vue_export-helper-DlAUqK2U.js": {
+    "file": "assets/_plugin-vue_export-helper-DlAUqK2U.js",
+    "name": "_plugin-vue_export-helper"
+  },
+  "public/asset/photos/3d-male-character-jumping-out-from-smart-phone-screen-and-holding-a-megaphone-free-png.png": {
+    "file": "assets/3d-male-character-jumping-out-from-smart-phone-screen-and-holding-a-megaphone-free-png-C4PEFF8o.png",
+    "src": "public/asset/photos/3d-male-character-jumping-out-from-smart-phone-screen-and-holding-a-megaphone-free-png.png"
+  },
+  "public/asset/photos/63a5ab75a44bfd09356d456f0fcccced-removebg-preview.png": {
+    "file": "assets/63a5ab75a44bfd09356d456f0fcccced-removebg-preview-Bf_fiJvQ.png",
+    "src": "public/asset/photos/63a5ab75a44bfd09356d456f0fcccced-removebg-preview.png"
+  },
+  "public/asset/photos/Gombe-Specialist-Hospital.webp": {
+    "file": "assets/Gombe-Specialist-Hospital-BcsolYaf.webp",
+    "src": "public/asset/photos/Gombe-Specialist-Hospital.webp"
+  },
+  "public/asset/photos/LIMH-Building-Front-View-1-1024x683.jpeg": {
+    "file": "assets/LIMH-Building-Front-View-1-1024x683-C9JbCnu8.jpeg",
+    "src": "public/asset/photos/LIMH-Building-Front-View-1-1024x683.jpeg"
+  },
+  "public/asset/photos/Muhammadu-Buhari-Specialist-Hospital-1.png": {
+    "file": "assets/Muhammadu-Buhari-Specialist-Hospital-1-Dd-3egJT.png",
+    "src": "public/asset/photos/Muhammadu-Buhari-Specialist-Hospital-1.png"
+  },
+  "public/asset/photos/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8yNV9zaW1wbGVfM2RfaWxsdXN0cmF0aW9uX29mX2FfcmVjb3Zlcnlfcm9vbV93aV80ZjhkNDIwNC02N2I4LTQwMDQtYTBlNy05YjljMjIyMzE2ZGVfMS5qcGc.webp": {
+    "file": "assets/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8yNV9zaW1wbGVfM2RfaWxsdXN0cmF0aW9uX29mX2FfcmVjb3Zlcnlfcm9vbV93aV80ZjhkNDIwNC02N2I4LTQwMDQtYTBlNy05YjljMjIyMzE2ZGVfMS5qcGc-3EYTbFS6.webp",
+    "src": "public/asset/photos/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8yNV9zaW1wbGVfM2RfaWxsdXN0cmF0aW9uX29mX2FfcmVjb3Zlcnlfcm9vbV93aV80ZjhkNDIwNC02N2I4LTQwMDQtYTBlNy05YjljMjIyMzE2ZGVfMS5qcGc.webp"
+  },
+  "public/asset/photos/fevicon.png": {
+    "file": "assets/fevicon-A5IHFBl_.png",
+    "src": "public/asset/photos/fevicon.png"
+  },
+  "public/asset/photos/national.png": {
+    "file": "assets/national-B1FjfKwE.png",
+    "src": "public/asset/photos/national.png"
+  },
+  "resources/js/Pages/Auth/ConfirmPassword.vue": {
+    "file": "assets/ConfirmPassword-DOIYV8nC.js",
+    "name": "ConfirmPassword",
+    "src": "resources/js/Pages/Auth/ConfirmPassword.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_GuestLayout-DyIzhdse.js",
+      "_TextInput-DvLcyDE7.js",
+      "_PrimaryButton-BL5A1dSu.js",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ForgotPassword.vue": {
+    "file": "assets/ForgotPassword-C7vzc5m0.js",
+    "name": "ForgotPassword",
+    "src": "resources/js/Pages/Auth/ForgotPassword.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_GuestLayout-DyIzhdse.js",
+      "_TextInput-DvLcyDE7.js",
+      "_PrimaryButton-BL5A1dSu.js",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ]
+  },
+  "resources/js/Pages/Auth/Login.vue": {
+    "file": "assets/Login-Dnips88U.js",
+    "name": "Login",
+    "src": "resources/js/Pages/Auth/Login.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Auth/Register.vue": {
+    "file": "assets/Register-DYB0VZNu.js",
+    "name": "Register",
+    "src": "resources/js/Pages/Auth/Register.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ResetPassword.vue": {
+    "file": "assets/ResetPassword-BCQARn6p.js",
+    "name": "ResetPassword",
+    "src": "resources/js/Pages/Auth/ResetPassword.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_GuestLayout-DyIzhdse.js",
+      "_TextInput-DvLcyDE7.js",
+      "_PrimaryButton-BL5A1dSu.js",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ]
+  },
+  "resources/js/Pages/Auth/VerifyEmail.vue": {
+    "file": "assets/VerifyEmail-BMsZzEef.js",
+    "name": "VerifyEmail",
+    "src": "resources/js/Pages/Auth/VerifyEmail.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_GuestLayout-DyIzhdse.js",
+      "_PrimaryButton-BL5A1dSu.js",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ]
+  },
+  "resources/js/Pages/Dashboard.vue": {
+    "file": "assets/Dashboard-S6I0oGin.js",
+    "name": "Dashboard",
+    "src": "resources/js/Pages/Dashboard.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_AuthenticatedLayout-CHzYvDbX.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Pages/BlooIUsage.vue": {
+    "file": "assets/BlooIUsage-CIcabWy8.js",
+    "name": "BlooIUsage",
+    "src": "resources/js/Pages/Pages/BlooIUsage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Pages/BlooInventory.vue": {
+    "file": "assets/BlooInventory-BbvvmmR3.js",
+    "name": "BlooInventory",
+    "src": "resources/js/Pages/Pages/BlooInventory.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Pages/BloodExpired.vue": {
+    "file": "assets/BloodExpired-Cj71kG5i.js",
+    "name": "BloodExpired",
+    "src": "resources/js/Pages/Pages/BloodExpired.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Pages/BloodExpireds.vue": {
+    "file": "assets/BloodExpireds-CWDXHkdk.js",
+    "name": "BloodExpireds",
+    "src": "resources/js/Pages/Pages/BloodExpireds.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Pages/DonorGivenBlood.vue": {
+    "file": "assets/DonorGivenBlood-CS2h7hLk.js",
+    "name": "DonorGivenBlood",
+    "src": "resources/js/Pages/Pages/DonorGivenBlood.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Pages/DonorProfile.vue": {
+    "file": "assets/DonorProfile-D9DEE9OI.js",
+    "name": "DonorProfile",
+    "src": "resources/js/Pages/Pages/DonorProfile.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Pages/Donors.vue": {
+    "file": "assets/Donors-kNXFjWla.js",
+    "name": "Donors",
+    "src": "resources/js/Pages/Pages/Donors.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Pages/HospitalProfile.vue": {
+    "file": "assets/HospitalProfile-2cJ0544a.js",
+    "name": "HospitalProfile",
+    "src": "resources/js/Pages/Pages/HospitalProfile.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Pages/Hospitals.vue": {
+    "file": "assets/Hospitals-DBv__OAC.js",
+    "name": "Hospitals",
+    "src": "resources/js/Pages/Pages/Hospitals.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Edit.vue": {
+    "file": "assets/Edit-BvkU_8VT.js",
+    "name": "Edit",
+    "src": "resources/js/Pages/Profile/Edit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_AuthenticatedLayout-CHzYvDbX.js",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-DlAUqK2U.js",
+      "_TextInput-DvLcyDE7.js",
+      "_PrimaryButton-BL5A1dSu.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/DeleteUserForm.vue": {
+    "file": "assets/DeleteUserForm-Bme2Gs1S.js",
+    "name": "DeleteUserForm",
+    "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "__plugin-vue_export-helper-DlAUqK2U.js",
+      "_TextInput-DvLcyDE7.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue": {
+    "file": "assets/UpdatePasswordForm-CY9sLvZg.js",
+    "name": "UpdatePasswordForm",
+    "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_TextInput-DvLcyDE7.js",
+      "_PrimaryButton-BL5A1dSu.js",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue": {
+    "file": "assets/UpdateProfileInformationForm-DmiyhvwI.js",
+    "name": "UpdateProfileInformationForm",
+    "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_TextInput-DvLcyDE7.js",
+      "_PrimaryButton-BL5A1dSu.js",
+      "__plugin-vue_export-helper-DlAUqK2U.js"
+    ]
+  },
+  "resources/js/Pages/Welcome.vue": {
+    "file": "assets/Welcome-D9p8mtQz.js",
+    "name": "Welcome",
+    "src": "resources/js/Pages/Welcome.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/Welcome-AoQiTwXf.css"
+    ],
+    "assets": [
+      "assets/fevicon-A5IHFBl_.png",
+      "assets/Gombe-Specialist-Hospital-BcsolYaf.webp",
+      "assets/national-B1FjfKwE.png",
+      "assets/Muhammadu-Buhari-Specialist-Hospital-1-Dd-3egJT.png",
+      "assets/LIMH-Building-Front-View-1-1024x683-C9JbCnu8.jpeg",
+      "assets/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8yNV9zaW1wbGVfM2RfaWxsdXN0cmF0aW9uX29mX2FfcmVjb3Zlcnlfcm9vbV93aV80ZjhkNDIwNC02N2I4LTQwMDQtYTBlNy05YjljMjIyMzE2ZGVfMS5qcGc-3EYTbFS6.webp"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-B6o0Jijx.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/Auth/ConfirmPassword.vue",
+      "resources/js/Pages/Auth/ForgotPassword.vue",
+      "resources/js/Pages/Auth/Login.vue",
+      "resources/js/Pages/Auth/Register.vue",
+      "resources/js/Pages/Auth/ResetPassword.vue",
+      "resources/js/Pages/Auth/VerifyEmail.vue",
+      "resources/js/Pages/Dashboard.vue",
+      "resources/js/Pages/Pages/BlooIUsage.vue",
+      "resources/js/Pages/Pages/BlooInventory.vue",
+      "resources/js/Pages/Pages/BloodExpired.vue",
+      "resources/js/Pages/Pages/BloodExpireds.vue",
+      "resources/js/Pages/Pages/DonorGivenBlood.vue",
+      "resources/js/Pages/Pages/DonorProfile.vue",
+      "resources/js/Pages/Pages/Donors.vue",
+      "resources/js/Pages/Pages/HospitalProfile.vue",
+      "resources/js/Pages/Pages/Hospitals.vue",
+      "resources/js/Pages/Profile/Edit.vue",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
+      "resources/js/Pages/Welcome.vue"
+    ],
+    "css": [
+      "assets/app-nba5r9Vt.css"
+    ],
+    "assets": [
+      "assets/3d-male-character-jumping-out-from-smart-phone-screen-and-holding-a-megaphone-free-png-C4PEFF8o.png",
+      "assets/63a5ab75a44bfd09356d456f0fcccced-removebg-preview-Bf_fiJvQ.png"
+    ]
+  }
+}
