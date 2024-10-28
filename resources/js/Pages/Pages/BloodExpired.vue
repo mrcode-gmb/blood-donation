@@ -71,7 +71,7 @@ const searchBlood = (choose) => {
 </script>
 
 <template>
-    <div>
+    <div class="main">
 
         <Head title="Apply" />
         <!-- Link side var and header here  -->

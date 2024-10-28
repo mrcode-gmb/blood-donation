@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\State;
 
 return new class extends Migration
 {
@@ -21,6 +22,7 @@ return new class extends Migration
             $table->string("hiv_status");
             $table->string("pcv")->nullable();
             $table->string("lga");
+            $table->foreignIdFor(State::class)->constrained();
             $table->string("gender");
             $table->string("home_address");
             $table->string("reason");

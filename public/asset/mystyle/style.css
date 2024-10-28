@@ -2,7 +2,7 @@
 @import url("./alert.css");
 @import url("./form.css");
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -13,7 +13,7 @@
     font-feature-settings: normal
 }
 
-:root{
+:root {
     --back-green: rgb(173, 216, 230);
     --back-hover: rgb(106, 213, 248);
     --back-darkgreen: rgb(21, 128, 163);
@@ -22,14 +22,14 @@
 
 }
 
-.main{
+.main {
     width: 100%;
 }
 
 
 /* start header style  */
-header{
-    width: 82.5%;
+header {
+    width: 88%;
     background: white;
     position: fixed;
     top: 0;
@@ -38,7 +38,8 @@ header{
     z-index: 20;
     transition: 0.5s ease;
 }
-.header-flex{
+
+.header-flex {
     width: 92%;
     margin: auto;
     display: flex;
@@ -47,22 +48,26 @@ header{
     align-items: center;
 
 }
-.header-left h4{
+
+.header-left h4 {
     font-size: 20px;
     text-transform: uppercase;
 }
-.header-right{
+
+.header-right {
     text-align: right;
 }
-.header-right p{
+
+.header-right p {
     font-size: 14px;
     color: #777;
 }
+
 /* end header style  */
 
 
 /* start side bar style  */
-.navbar{
+.navbar {
     height: 100vh;
     width: 240px;
     background: var(--back-green);
@@ -71,29 +76,34 @@ header{
     z-index: 21;
     transition: 0.5s ease;
 }
-.navbar::-webkit-scrollbar{
+
+.navbar::-webkit-scrollbar {
     /* display: none; */
     z-index: -1;
     width: 0px;
 }
-.nav-right{
+
+.nav-right {
     width: 90%;
     margin-left: auto;
     /* padding-top: 10px; */
 }
-.nav-top{
+
+.nav-top {
     align-items: center;
     display: flex;
     justify-content: space-between;
     position: relative;
 }
-.nav-brand img{
+
+.nav-brand img {
     width: 80px;
     height: 80px;
     left: 0;
     margin-left: -20px;
 }
-.nav-open{
+
+.nav-open {
     width: 35px;
     height: 35px;
     display: flex;
@@ -104,68 +114,88 @@ header{
     right: -17px;
     z-index: 510 !important;
 }
-.nav-open i{
+
+.nav-open i {
     margin: auto;
     font-size: 16px;
     color: var(--back-darkgreen);
 }
-#opensidebar{
+
+#opensidebar {
     display: none;
 }
-#opensidebar i{
+
+#opensidebar i {
     margin: auto;
     font-size: 16px;
     color: var(--back-darkgreen);
 
 }
-.navbar-nav{
+
+.navbar-nav {
     width: 100%;
     margin-top: 12px;
     overflow: auto;
     height: 80vh;
 }
-.navbar-nav::-webkit-scrollbar{
+
+.navbar-nav::-webkit-scrollbar {
     width: 0px;
 }
-.navbar-nav li{
+
+.navbar-nav li {
     list-style: none;
     margin: 5px 0;
 }
-.navbar-nav li a{
+
+.navbar-nav li a {
     width: 100%;
     text-decoration: none;
     color: #333;
 }
-.navbar-nav li a .link-hover{
+
+.navbar-nav li a .link-hover {
     width: 100%;
     padding: 20px;
     font-size: 15px;
     overflow: hidden;
     border-left: solid 4px var(--back-green);
 }
-.navbar-nav li a .link-hover i{
+
+.navbar-nav li a .link-hover i {
     margin-right: 12px;
 }
-.navbar-nav li a .link-hover span{
+
+.navbar-nav li a .link-hover span {
     font-size: 17px;
 }
-.navbar-nav li a .link-hover:hover{
+
+.navbar-nav li a .link-hover:hover {
     background: var(--back-hover);
     border-left: solid 4px rgb(0, 173, 230);
 
 }
-.header-mobile{
+
+.header-mobile {
     display: none;
 }
 
+@media screen and (max-width: 1400px) {
+    header {
+        width: 82.5%;
+    }
+}
+
 @media screen and (max-width: 770px) {
-    header{
+    header {
         display: none;
     }
-    .mobile-header{
+
+    .mobile-header {
         display: flex;
     }
-    .header-mobile{
+
+    .header-mobile {
         display: block;
         position: fixed;
         color: black;
@@ -175,7 +205,8 @@ header{
         padding-right: 17px;
         top: 0;
     }
-    .header-with{
+
+    .header-with {
         width: 90%;
         margin: auto;
         display: flex;
@@ -184,10 +215,12 @@ header{
         padding: 15px 0;
         align-items: center;
     }
-    .header-with p{
+
+    .header-with p {
         font-size: 20px;
     }
-    .mobile-menu{
+
+    .mobile-menu {
         width: 40px;
         height: 40px;
         background: var(--back-green);
@@ -196,17 +229,20 @@ header{
         border-radius: 50%;
         cursor: pointer;
     }
-    .mobile-menu:hover{
+
+    .mobile-menu:hover {
         background: var(--back-hover);
     }
-    .mobile-menu i{
+
+    .mobile-menu i {
         margin: auto;
     }
 
-    .navbar{
+    .navbar {
         width: 0px;
     }
-    #closemobilebar{
+
+    #closemobilebar {
         display: none;
     }
 }
@@ -216,32 +252,43 @@ header{
 
 
 /* main body for my dashboard */
-.main-body{
-    width: 82.5%;
+.main-body {
+    width: 88%;
     height: 100vh;
     margin-left: auto;
     padding-top: 90px;
     transition: 0.5s ease;
 }
+
+@media screen and (max-width: 1400px) {
+    .main-body {
+        width: 82.5%;
+    }
+}
+
 @media screen and (max-width: 770px) {
-    .main-body{
+    .main-body {
         width: 95%;
         margin: auto;
         padding-top: 70px;
     }
 }
-.dashboard{
+
+.dashboard {
     width: 92%;
     margin: auto;
     margin-top: 30px;
 }
-.dashboard .dashboard-header{
+
+.dashboard .dashboard-header {
     width: 100%;
 }
-.dashboard .dashboard-header h4{
+
+.dashboard .dashboard-header h4 {
     font-size: 24px;
 }
-.dashboard .dashboard-body{
+
+.dashboard .dashboard-body {
     margin-top: 60px;
     display: flex;
     width: 100%;
@@ -250,17 +297,20 @@ header{
     flex-wrap: wrap;
     position: relative;
 }
-.dashboard-blocks{
+
+.dashboard-blocks {
     flex-basis: 23%;
     border: solid 1px var(--back-green);
     min-height: 100px;
     border-radius: 10px;
 }
-.dashboard-blocks .dash-icon{
+
+.dashboard-blocks .dash-icon {
     width: 100%;
     display: flex;
 }
-.dashboard-blocks .dash-icon .bg-icon{
+
+.dashboard-blocks .dash-icon .bg-icon {
     margin: auto;
     display: flex;
     width: 47px;
@@ -269,16 +319,19 @@ header{
     border-radius: 10px;
     margin-top: -22px;
 }
-.dashboard-blocks .dash-icon .bg-icon i{
+
+.dashboard-blocks .dash-icon .bg-icon i {
     margin: auto;
     color: white;
     font-size: 20px;
 }
-.dashboard-blocks .dashboard-count{
+
+.dashboard-blocks .dashboard-count {
     width: 90%;
     margin: auto;
 }
-.dashboard-blocks .dashboard-count .space-between{
+
+.dashboard-blocks .dashboard-count .space-between {
     position: absolute;
     bottom: 10px;
     display: flex;
@@ -287,14 +340,16 @@ header{
     flex-wrap: wrap;
     align-items: baseline;
 }
-.dashboard-blocks .dashboard-count .space-between h4{
+
+.dashboard-blocks .dashboard-count .space-between h4 {
     font-size: 25px;
 }
-.dashboard-blocks .dashboard-count .space-between p{
+
+.dashboard-blocks .dashboard-count .space-between p {
     color: #777;
 }
 
-.dashboard-footer{
+.dashboard-footer {
     width: 100%;
     min-height: 300px;
     border: solid 1px var(--back-green);
@@ -302,38 +357,43 @@ header{
     margin-top: 40px;
     display: flex;
 }
-.dashboard-footer .dashboard-more{
+
+.dashboard-footer .dashboard-more {
     margin: auto;
     text-align: center;
 }
 
-.dashboard-footer .dashboard-more h4{
+.dashboard-footer .dashboard-more h4 {
     font-size: 24px;
     text-transform: uppercase;
 }
 
-.dashboard-footer .dashboard-more p{
+.dashboard-footer .dashboard-more p {
     color: #888;
     margin-top: 10px;
 }
 
 @media screen and (max-width: 770px) {
-    .dashboard .dashboard-body{
+    .dashboard .dashboard-body {
         margin-top: 0;
     }
-    .dashboard-blocks{
+
+    .dashboard-blocks {
         flex-basis: 100%;
         margin-top: 40px;
     }
-    .dashboard-blocks .dashboard-count .space-between{
+
+    .dashboard-blocks .dashboard-count .space-between {
         width: 100%;
         position: relative;
         margin-top: 40px;
     }
-    .dashboard-footer{
+
+    .dashboard-footer {
         min-height: 150px;
     }
-    .dashboard{
+
+    .dashboard {
         width: 95%;
         padding-bottom: 30px;
     }
@@ -343,53 +403,62 @@ header{
 
 
 /* complete style dashboard here i finished all  */
-.schoolbook{
+.schoolbook {
     width: 92%;
     margin: auto;
     margin-top: 30px;
 }
-.schoolbook-header{
+
+.schoolbook-header {
     width: 100%;
     display: block;
 }
-.schoolbook-header h4{
+
+.schoolbook-header h4 {
     font-size: 20px;
 }
-.schoolbook-header p{
+
+.schoolbook-header p {
     font-size: 15px;
     color: #777;
     margin-top: 10px;
 }
-.horizontal-line{
+
+.horizontal-line {
     width: 100%;
     height: 1px;
     margin: 20px 0;
     background: var(--back-green);
 }
-.schoolbook-body{
+
+.schoolbook-body {
     width: 100%;
 }
 
-.tabs{
+.tabs {
     width: auto;
 }
-.tabs-flex{
+
+.tabs-flex {
     display: flex;
     align-items: center;
     width: 100%;
     padding-bottom: 17px;
     overflow-x: auto;
 }
-.tabs-flex::-webkit-scrollbar{
+
+.tabs-flex::-webkit-scrollbar {
     background: #efefef;
     border-radius: 10px;
     height: 6px;
 }
-.tabs-flex::-webkit-scrollbar-thumb{
+
+.tabs-flex::-webkit-scrollbar-thumb {
     background: var(--back-green);
     border-radius: 10px;
 }
-.tabs-header{
+
+.tabs-header {
     padding: 12px 20px;
     display: flex;
     transition: 0.5s;
@@ -399,16 +468,18 @@ header{
     cursor: pointer;
     margin-right: 15px;
 }
-.tabs-header:hover{
+
+.tabs-header:hover {
     background: var(--back-green);
     color: white;
 }
-.tabs-header p{
+
+.tabs-header p {
     margin: auto;
 }
 
 
-#container{
+#container {
     display: flex;
     align-items: center;
     width: 100%;
@@ -416,17 +487,19 @@ header{
     overflow-x: auto;
     margin-top: 15px;
 }
-#container::-webkit-scrollbar{
+
+#container::-webkit-scrollbar {
     background: #efefef;
     border-radius: 10px;
     height: 6px;
 }
-#container::-webkit-scrollbar-thumb{
+
+#container::-webkit-scrollbar-thumb {
     background: var(--back-green);
     border-radius: 10px;
 }
 
-.col-md-halp{
+.col-md-halp {
     min-width: 240px;
     margin-right: 15px;
     border-radius: 10px;
@@ -435,20 +508,22 @@ header{
     animation: opacities 1s ease;
 }
 
-@keyframes opacities{
-    0%{
+@keyframes opacities {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
 
-.books-header{
+.books-header {
     width: 100%;
     display: flex;
 }
-.books-header .books-logo{
+
+.books-header .books-logo {
     margin: auto;
     margin-top: 30px;
     display: flex;
@@ -459,46 +534,53 @@ header{
     border-radius: 50%;
 }
 
-.books-header .books-logo h4{
+.books-header .books-logo h4 {
     color: var(--back-green);
     margin: auto;
     font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
 }
-.books-body{
+
+.books-body {
     width: 95%;
     margin: auto;
     word-wrap: break-word;
     text-align: center;
     margin-top: 12px;
 }
-.books-body h4{
+
+.books-body h4 {
     font-size: 20px;
 }
-.books-body p{
+
+.books-body p {
     color: #777;
     font-size: 15px;
     margin-bottom: 20px;
 }
-.books-footer{
+
+.books-footer {
     width: 75%;
     margin: auto;
     text-align: center;
 }
-.books-footer a{
+
+.books-footer a {
     text-decoration: none;
     color: white;
     padding-top: 30px;
 }
-.books-footer a .btn-success{
+
+.books-footer a .btn-success {
     width: 100%;
     padding: 12px 0;
     border-radius: 10px;
     transition: 0.5s ease;
     background: var(--back-green);
 }
-.books-footer a .btn-success:hover{
+
+.books-footer a .btn-success:hover {
     background: var(--back-hover);
 
 }
@@ -506,21 +588,24 @@ header{
 
 
 /* start profile design here  */
-.account-header{
+.account-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
-.account-left h4{
+
+.account-left h4 {
     font-size: 20px;
 }
-.account-left p{
+
+.account-left p {
     font-size: 15px;
     color: #777;
     /* margin-top: 10px; */
 }
-.account-right button{
+
+.account-right button {
     padding: 15px 16px;
     font-size: 15px;
     border: solid 1px var(--back-green);
@@ -531,45 +616,54 @@ header{
     color: white;
     transition: 0.5s;
 }
-.account-right button:hover{
+
+.account-right button:hover {
     background: var(--back-hover);
 }
-.account{
+
+.account {
     margin: 25px 0;
 }
 
-.grid-2{
+.grid-2 {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
 }
-.col-md-6{
+
+.col-md-6 {
     flex-basis: 48%;
     background: white;
     border: solid 1px var(--back-green);
     min-height: 220px;
     border-radius: 10px;
 }
-.form-header{
+
+.form-header {
     padding: 15px 20px;
 }
-.form-header h4{
+
+.form-header h4 {
     font-size: 20px;
 }
-.form-body{
+
+.form-body {
     padding: 0 20px;
 
 }
-.form-group{
+
+.form-group {
     width: 100%;
     margin-bottom: 15px;
 }
-.form-group label{
+
+.form-group label {
     color: #555;
 }
-.input-control{
+
+.input-control {
     width: 100%;
     margin-top: 5px;
     padding: 14px;
@@ -578,19 +672,22 @@ header{
     border-radius: 10px;
     font-size: 15px;
 }
-.input-control-file{
+
+.input-control-file {
     padding: 14px;
     cursor: pointer;
     color: #aaa;
 }
-.input-control-file::-webkit-file-upload-button{
+
+.input-control-file::-webkit-file-upload-button {
     display: none;
 }
 
-.input-control:focus{
+.input-control:focus {
     box-shadow: 0 0 3px 0 var(--back-green);
 }
-.form-group button{
+
+.form-group button {
     width: 100%;
     margin-top: 5px;
     padding: 13px;
@@ -603,38 +700,47 @@ header{
     transition: 0.6s ease-in-out;
     border-radius: 10px;
 }
-.form-group button:hover{
+
+.form-group button:hover {
     background: var(--back-hover);
 
 }
-.row{
+
+.row {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.col-lg-6{
+
+.col-lg-6 {
     flex-basis: 48%;
 }
+
 @media screen and (max-width: 770px) {
-    .account-header{
+    .account-header {
         align-items: flex-end;
         /* padding-top: 15px; */
     }
-    .account-left p{
+
+    .account-left p {
         display: none;
     }
-    .account-right button{
+
+    .account-right button {
         padding: 12px;
     }
-    .col-md-6{
+
+    .col-md-6 {
         flex-basis: 100%;
         margin-bottom: 20px;
     }
-    .col-lg-6{
+
+    .col-lg-6 {
         flex-basis: 100%;
     }
 }
+
 /* end profile design here  */
 
 
@@ -643,13 +749,14 @@ header{
 
 /* start css tabs  */
 
-.tabs{
+.tabs {
     width: 97%;
     margin: auto;
     transition: 0.3s ease;
 
 }
-.container{
+
+.container {
     width: 100%;
     margin: auto;
     display: grid;
@@ -657,20 +764,23 @@ header{
     gap: 15px;
 }
 
-.container .col-md-3{
+.container .col-md-3 {
     box-shadow: 0 8px 8px 4px #efefef;
     background: #fff;
     margin-top: 30px;
+    padding-top: 16px;
     border-radius: 5px;
 }
-.icon-flex{
+
+.icon-flex {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
 }
-.icon-flex .left{
+
+.icon-flex .left {
     flex-basis: 27%;
     align-items: center;
     justify-content: center;
@@ -678,26 +788,30 @@ header{
     padding: 20px 0;
     border-left: none;
 }
-.icon-flex .left i{
+
+.icon-flex .left i {
     font-size: 20px;
     color: white;
     background: var(--back-green);
     padding: 10px 13px;
     border-radius: 5px;
 }
-.icon-flex .right{
+
+.icon-flex .right {
     flex-basis: 70%;
     align-items: start;
     display: block;
     position: relative;
 }
-.icon-flex .right h4{
+
+.icon-flex .right h4 {
     align-items: start;
     position: absolute;
     font-size: 20px;
     color: #333;
 }
-.icon-flex .right .percent{
+
+.icon-flex .right .percent {
     align-items: start;
     font-size: 18px;
     color: #333;
@@ -705,23 +819,26 @@ header{
     margin-bottom: 13px;
 
 }
-.loader{
+
+.loader {
     background: #e2e1e1;
     width: 100%;
     height: 3px;
 }
-.shows{
-    background: linear-gradient(to right, rgb(180, 180, 180),grey);
+
+.shows {
+    background: linear-gradient(to right, rgb(180, 180, 180), grey);
     width: 100%;
     height: 3px;
 
 }
 
-@media screen and (max-width: 1699px){
-    .header{
+@media screen and (max-width: 1699px) {
+    .header {
         border-radius: 4px;
     }
-    .icon-flex .right h4{
+
+    .icon-flex .right h4 {
         margin-top: 15px;
         font-size: 15px;
     }
@@ -732,34 +849,38 @@ header{
 /* start display bagde */
 
 
-.grid{
+.grid {
     display: grid;
 }
 
-.grid\:2{
+.grid\:2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.gap\:20{
+
+.gap\:20 {
     gap: 25px;
 }
-.pt-20{
+
+.pt-20 {
     padding-top: 2.5rem;
 }
 
 
 
 
-.str{
+.str {
     width: 97%;
     margin: auto;
     margin-top: 20px;
 }
-.str .str-home{
+
+.str .str-home {
     display: flex;
     width: 100%;
     align-items: center;
 }
-.str .str-home i{
+
+.str .str-home i {
     font-size: 17px;
     font-weight: 900;
     background: var(--back-green);
@@ -767,20 +888,23 @@ header{
     border-radius: 5px;
     color: white;
 }
-.str .str-home .db{
+
+.str .str-home .db {
     display: flex;
 }
-.str .str-home .db h4{
+
+.str .str-home .db h4 {
     font-size: 18px;
     margin-left: 12px;
 }
-.str .str-home .db p{
+
+.str .str-home .db p {
     font-weight: 100;
 }
 
 
 
-.table-st{
+.table-st {
     margin-top: 30px;
     background: white;
     box-shadow: 0px 0px 8px 0 #ddd;
@@ -788,18 +912,20 @@ header{
     /* border: solid 1px #d3d4d6; */
 }
 
-.table-st .table-st-head{
+.table-st .table-st-head {
     width: 98%;
     justify-content: space-between;
     display: flex;
     margin: auto;
     padding: 25px 0;
 }
-.table-st .table-st-head h4{
+
+.table-st .table-st-head h4 {
     font-size: 20px;
     padding: 7px 0 7px 7px;
 }
-.table-st .table-st-head input{
+
+.table-st .table-st-head input {
     width: 220px;
     padding: 7px 0 7px 7px;
     font-size: 14px;
@@ -808,16 +934,18 @@ header{
     border-radius: 2px;
     outline: none;
 }
-.table-st .table-st-head input:focus{
+
+.table-st .table-st-head input:focus {
     border: solid 1px var(--back-green);
 }
 
-.input-seach{
+.input-seach {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.button{
+
+.button {
     background: var(--back-green);
     font-size: 14px;
     color: #333;
@@ -825,87 +953,101 @@ header{
     cursor: pointer;
     border-radius: 6px;
 }
+
 /* student table */
-.table-body{
+.table-body {
     overflow-x: auto;
 }
-.table-body::-webkit-scrollbar{
+
+.table-body::-webkit-scrollbar {
     height: 6px;
 }
 
-.table-body::-webkit-scrollbar-thumb{
+.table-body::-webkit-scrollbar-thumb {
     background: var(--back-green);
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
-.student-data{
+
+.student-data {
     width: 100%;
     text-align: left;
     /* margin-top: 10px; */
     border-collapse: collapse;
 }
-.student-data tr{
+
+.student-data tr {
     background: white;
 }
-.student-data tr:nth-child(even){
+
+.student-data tr:nth-child(even) {
     background: #fcfcfc;
 }
+
 .student-data tr th,
-.student-data tr td{
+.student-data tr td {
     padding: 13px 20px;
     border: solid 1px #efefef;
     font-size: 14px;
 }
-.student-data tr th{
+
+.student-data tr th {
     font-weight: 600;
     font-size: 14px;
     text-wrap: nowrap;
 }
-.student-data tr td{
+
+.student-data tr td {
     text-wrap: nowrap;
 }
-.student-data tr td a{
+
+.student-data tr td a {
     text-decoration: none;
     color: #888;
     margin-right: 8px;
     font-size: 16px;
     /* font-weight: 100; */
 }
-.student-data tr td .edit{
+
+.student-data tr td .edit {
     color: var(--main-color);
 }
 
-.student-data tr td .view{
+.student-data tr td .view {
     color: rgb(32, 190, 32);
 }
 
-.student-data tr td .delete{
+.student-data tr td .delete {
     color: rgb(253, 33, 33);
 }
-.status{
+
+.status {
     padding: 5px 10px;
     background: var(--back-green);
     font-size: 12px;
     color: #444;
     border-radius: 6px;
 }
-.status-reject{
+
+.status-reject {
     padding: 5px 10px;
     background: rgb(254, 93, 39);
     font-size: 12px;
     color: white;
     border-radius: 6px;
 }
-.status-approved{
+
+.status-approved {
     padding: 5px 10px;
     background: rgb(32, 190, 32);
     font-size: 12px;
     color: white;
     border-radius: 6px;
 }
+
 /* modal css  */
 
-.modal{
+.modal {
     width: 100%;
     position: fixed;
     background: rgba(0, 0, 0, 0.2);
@@ -919,7 +1061,7 @@ header{
 
 }
 
-.modal-dialog{
+.modal-dialog {
     width: 30%;
     background: white;
     margin: auto;
@@ -928,7 +1070,8 @@ header{
     border-radius: 10px;
     animation: fadeIn 0.6s both;
 }
-.modal-blood{
+
+.modal-blood {
     width: 30%;
     background: white;
     margin: auto;
@@ -936,30 +1079,36 @@ header{
     border-radius: 10px;
     animation: fadeIn 0.6s both;
 }
-.modal-head{
+
+.modal-head {
     width: 100%;
     padding-bottom: 15px;
     border-bottom: solid 1px #ddd;
 }
-.modal-head p{
+
+.modal-head p {
     color: #665a13;
 }
-.modal-body{
+
+.modal-body {
     width: 100%;
     padding: 25px 0px;
     padding-bottom: 0px;
 }
-.modal-body h3{
+
+.modal-body h3 {
     font-size: 20px;
     color: #888;
     font-weight: 400;
 }
-.modal-footer{
+
+.modal-footer {
     width: 100%;
     padding: 10px 0;
     text-align: right;
 }
-.modal-footer button{
+
+.modal-footer button {
     border: none;
     background: var(--back-green);
     padding: 9px 15px;
@@ -971,72 +1120,78 @@ header{
     outline: none;
 }
 
-.modal-footer .delete{
+.modal-footer .delete {
     background: rgb(245, 51, 51);
     color: white;
 }
 
 @keyframes fadeIn {
     0% {
-      opacity: 0;
-      transform: translateY(-70px);
+        opacity: 0;
+        transform: translateY(-70px);
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
-@media screen and (max-width: 1699px){
-    .right .menu-icon i{
+@media screen and (max-width: 1699px) {
+    .right .menu-icon i {
         margin-left: 20%;
     }
-    .header{
+
+    .header {
         border-radius: 4px;
     }
-    .tabs{
-        width:97%;
+
+    .tabs {
+        width: 97%;
     }
 }
 
 
 
-.chart-col{
+.chart-col {
     width: 100%;
 }
 
-.full-chart{
+.full-chart {
     margin-top: 2rem;
     border-radius: 5px;
     padding: 12px;
     box-shadow: 10px 10px 1rem 0px #ddd;
     background: white;
 }
-.chart-title{
+
+.chart-title {
     padding: 13px;
     color: #333;
 }
-.chart-title p{
+
+.chart-title p {
     font-size: 15px;
     margin-top: 3px;
     color: #555;
 }
 
 
-.dont-have{
+.dont-have {
     display: flex;
 }
-.dont-have img{
+
+.dont-have img {
     margin: auto;
     width: 400px;
     height: 340px;
 }
 
-.create-app{
+.create-app {
     text-align: right;
     padding: 10px;
 }
 
-.create-app a{
+.create-app a {
     text-decoration: none;
     background: var(--back-green);
     padding: 10px 20px;
@@ -1044,13 +1199,14 @@ header{
     border-radius: 5px;
 }
 
-.flex-class{
+.flex-class {
     display: flex;
     align-items: center;
     gap: 15px;
     width: 100%;
 }
-.circle-success{
+
+.circle-success {
     width: 60px;
     height: 60px;
     display: flex;
@@ -1058,25 +1214,27 @@ header{
     border-radius: 50%;
     color: white;
 }
-.circle-success i{
+
+.circle-success i {
     margin: auto;
     font-size: 22px;
 }
 
-.circle-text p{
+.circle-text p {
     font-size: 1.3rem;
 }
 
-.profile-caption h4{
+.profile-caption h4 {
     font-size: 1.2rem;
     color: #333;
 }
 
-.profile-card{
+.profile-card {
     display: flex;
     justify-content: space-between;
 }
-.profile-success{
+
+.profile-success {
     width: 60px;
     height: 60px;
     display: flex;
@@ -1084,14 +1242,17 @@ header{
     border-radius: 50%;
     color: white;
 }
-.profile-success h4{
+
+.profile-success h4 {
     margin: auto;
     font-size: 22px;
 }
-.profile-caption span{
+
+.profile-caption span {
     font-size: 14px;
 }
-.profile-menu a{
+
+.profile-menu a {
     text-decoration: none;
     text-wrap: nowrap;
     background: var(--back-green);
@@ -1102,24 +1263,27 @@ header{
 }
 
 /* profile-tabs */
-.pb-0-px{
+.pb-0-px {
     padding-bottom: 0px !important;
 }
-.profile-tabs-new{
+
+.profile-tabs-new {
     margin-top: 3rem;
     padding: 0 10px;
 }
 
-.profile-tab{
+.profile-tab {
     width: 100%;
     text-wrap: nowrap;
     display: flex;
     gap: 10px;
 }
-.profile-tab li{
+
+.profile-tab li {
     list-style: none;
 }
-.profile-tab li span{
+
+.profile-tab li span {
     text-decoration: none;
     padding: 12px 12px;
     font-size: 14px;
@@ -1131,10 +1295,11 @@ header{
     border-top-right-radius: 6px;
     cursor: pointer;
 }
-.profile-tab li span:hover{
+
+.profile-tab li span:hover {
     background: var(--back-green);
 }
 
-.pyx{
+.pyx {
     padding: 10px 15px !important;
 }

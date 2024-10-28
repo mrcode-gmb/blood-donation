@@ -28,7 +28,7 @@ class ApplyController extends Controller
         }
         // $doctorStatus = DonorDetails::where('user_id', Auth::user()->id)->count();
         // $blood = Blood::all();
-        return Inertia::render("Pages/Apply", ['bloods' => $blood, "state" => $state, 'donorStatus' => $donor]);
+        return Inertia::render("Pages/BloodExpireds", ['bloods' => $blood, "state" => $state, 'donorStatus' => $donor]);
     }
 
     /**

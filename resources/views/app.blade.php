@@ -10,50 +10,22 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{asset("asset/fontawesome-free/css/all.min.css")}}">
-
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset/boxicons/css/boxicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
 
     <!-- Scripts -->
     @routes
-    @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
+    @vite('resources/js/app.js') <!-- Updated entry file for Vue -->
+    @vite(['resources/js/Pages/' . $page['component'] . '.vue']) <!-- Updated for Vue components -->
     @inertiaHead
-
-    <style>
-        .header-scroll {
-            position: fixed;
-            background: white;
-            border: solid 1px #ddd;
-            animation: headerAnimate 0.4s both;
-        }
-
-        @keyframes headerAnimate {
-            0% {
-                transform: translateY(10px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        .a-dark {
-            color: black !important;
-        }
-
-        .a-white {
-            color: white;
-        }
-    </style>
-
 </head>
 
 <body class="font-sans antialiased">
     @inertia
-
-    <script src="{{ mix('js/app.js') }}"></script>
 </body>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
 
 </html>
