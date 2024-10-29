@@ -34,6 +34,19 @@ const toggleSidebar = (isOpen, e) => {
     }
   }
 };
+
+// Event listeners for mobile menu toggling
+const openMobileMenu = () => {
+  document.querySelector(".navbar").style.width = "200px";
+  document.querySelector("#openmobilebar").style.display = "none";
+  document.querySelector("#closemobilebar").style.display = "flex";
+};
+
+const closeMobileMenu = () => {
+  document.querySelector(".navbar").style.width = "0px";
+  document.querySelector("#openmobilebar").style.display = "flex";
+  document.querySelector("#closemobilebar").style.display = "none";
+};
 </script>
 
 <template>
@@ -53,20 +66,24 @@ const toggleSidebar = (isOpen, e) => {
             </div>
           </header>
 
-          <!-- <div class="header-mobile">
-                        <div class="header-with">
-                            <div class="mobile-menu" id="openmobilebar" @click="openMobileMenu">
-                                <i class="fa fa-angle-right"></i>
-                            </div>
-                            <div class="mobile-menu" id="closemobilebar" @click="closeMobileMenu">
-                                <i class="fa fa-angle-left"></i>
-                            </div>
-                            <p>Online Learning</p>
-                            <div class="mobile-menu">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div> -->
+          <div class="header-mobile-in">
+            <div class="header-with">
+              <div class="mobile-header">
+                <img
+                  src="../../../public/asset/photos/63a5ab75a44bfd09356d456f0fcccced-removebg-preview.png"
+                  alt="Logo"
+                />
+                <p>Blood Donation</p>
+              </div>
+              <div
+                class="mobile-menu mobile-margin"
+                id="openmobilebar"
+                @click="openMobileMenu(true, $event)"
+              >
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
 
           <div class="navbar">
             <div class="nav-right">
@@ -90,6 +107,9 @@ const toggleSidebar = (isOpen, e) => {
                   @click="toggleSidebar(true, $event)"
                 >
                   <i class="fa fa-angle-right"></i>
+                </div>
+                <div class="mobile-menu" id="closemobilebar" @click="closeMobileMenu()">
+                  <i class="fa fa-angle-left"></i>
                 </div>
               </div>
             </div>
@@ -192,12 +212,12 @@ const toggleSidebar = (isOpen, e) => {
               </div>
               <div v-else-if="$page.props.auth.user.role == '2'">
                 <li>
-                  <a href="myacount.html">
+                  <Link href="/profile">
                     <div class="link-hover">
                       <i class="fa fa-user-circle"></i>
                       <span>My profile</span>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="/apply">
