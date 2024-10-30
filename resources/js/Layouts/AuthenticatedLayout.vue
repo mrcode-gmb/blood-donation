@@ -249,7 +249,7 @@ window.onload = () => {
                 <div
                     v-if="$page.props.auth.user.role == '1' || ($page.props.auth.user.role == '4' && $page.props.auth.user.is_active == '2')">
                     <div class="tabs" id="tabls">
-                        <div class="container">
+                        <div class="container-fluiding">
                             <div class="col-md-3">
                                 <div class="icon-flex">
                                     <div class="left">
@@ -321,7 +321,7 @@ window.onload = () => {
                 </div>
                 <div v-else-if="$page.props.auth.user.role == '3' && $page.props.auth.user.is_active == '2'">
                     <div class="tabs" id="tabls">
-                        <div class="container">
+                        <div class="container-fluiding">
                             <div class="col-md-3">
                                 <div class="icon-flex">
                                     <div class="left">
