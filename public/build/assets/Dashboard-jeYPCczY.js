@@ -1,1 +1,0 @@
-import{_ as e}from"./AuthenticatedLayout-CasKPzic.js";import{o as r,f as s,a,u as t,Z as o,m as _,F as n}from"./app-CT1gEd_W.js";const u={__name:"Dashboard",setup(c){return(m,f)=>(r(),s(n,null,[a(t(o),{title:"Dashboard"}),a(_),a(e)],64))}};export{u as default};

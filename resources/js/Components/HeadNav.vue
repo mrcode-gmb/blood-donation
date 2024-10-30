@@ -115,12 +115,12 @@ const closeMobileMenu = () => {
             </div>
             <div class="navbar-nav">
               <li>
-                <a href="../dashboard/">
+                <Link href="/dashboard">
                   <div class="link-hover">
                     <i class="fa fa-home"></i>
                     <span>Dashboard</span>
                   </div>
-                </a>
+                </Link>
               </li>
               <div
                 v-if="
@@ -130,12 +130,12 @@ const closeMobileMenu = () => {
                 "
               >
                 <li>
-                  <a href="/hostpitals/records">
+                  <Link href="/hostpitals/records">
                     <div class="link-hover">
                       <i class="fa fa-hospital-symbol"></i>
                       <span>Hospitals</span>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link href="/donors">
