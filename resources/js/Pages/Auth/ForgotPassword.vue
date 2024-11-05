@@ -1,61 +1,78 @@
 <script setup>
-import GuestLayout from '@/Layouts/GuestLayout.vue';
-import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
-import TextInput from '@/Components/TextInput.vue';
-import { Head, useForm } from '@inertiajs/vue3';
+import GuestLayout from "@/Layouts/GuestLayout.vue";
+import InputError from "@/Components/InputError.vue";
+import InputLabel from "@/Components/InputLabel.vue";
+import PrimaryButton from "@/Components/PrimaryButton.vue";
+import TextInput from "@/Components/TextInput.vue";
+import { Head, useForm } from "@inertiajs/vue3";
 
 defineProps({
-    status: {
-        type: String,
-    },
+  status: {
+    type: String,
+  },
 });
 
 const form = useForm({
-    email: '',
+  email: "",
 });
 
 const submit = () => {
-    form.post(route('password.email'));
+  form.post(route("password.email"));
 };
 </script>
 
 <template>
-    <GuestLayout>
-        <Head title="Forgot Password" />
-
-        <div class="mb-4 text-sm text-gray-600">
-            Forgot your password? No problem. Just let us know your email address and we will email you a password reset
-            link that will allow you to choose a new one.
-        </div>
-
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-            {{ status }}
-        </div>
-
-        <form @submit.prevent="submit">
-            <div>
-                <InputLabel for="email" value="Email" />
-
-                <TextInput
-                    id="email"
+  <div>
+    <Head title="Forgot Password" />
+    <section>
+      <form @submit.prevent="submit">
+        <div class="form">
+          <div class="col-2 form-averter">
+            <div class="avater">
+              <img
+                src="../../../../public/asset/photos/3d-male-character-jumping-out-from-smart-phone-screen-and-holding-a-megaphone-free-png.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-2 form-data">
+            <div class="form-label">
+              <div class="form-header">
+                <h4>Forgot your password?</h4>
+                <p>
+                  No problem. Just let us know your email address and we will email you a
+                  password reset link that will allow you to choose a new one.
+                </p>
+              </div>
+              <div class="form-body">
+                <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
+                  {{ status }}
+                </div>
+                <div class="form-group">
+                  <input
                     type="email"
-                    class="mt-1 block w-full"
+                    placeholder=" "
+                    id="email"
                     v-model="form.email"
                     required
-                    autofocus
                     autocomplete="username"
-                />
-
-                <InputError class="mt-2" :message="form.errors.email" />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                  />
+                  <label for="">Email</label>
+                </div>
+                <InputError class="password-alert" :message="form.errors.email" />
+                <div class="form-group mb-5">
+                  <button
+                    :class="{ 'opacity-25': form.processing }"
+                    :disabled="form.processing"
+                  >
                     Email Password Reset Link
-                </PrimaryButton>
+                  </button>
+                </div>
+              </div>
             </div>
-        </form>
-    </GuestLayout>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
 </template>

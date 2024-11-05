@@ -375,12 +375,12 @@ header {
 /* main body for my dashboard */
 .main-body {
     width: 88%;
-    height: 100vh;
+    min-height: 100vh;
     margin-left: auto;
     padding-top: 90px;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
-    background: #efefef;
+    background: #f1f1f1;
 }
 
 @media screen and (max-width: 1400px) {

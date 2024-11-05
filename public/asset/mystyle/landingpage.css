@@ -298,7 +298,7 @@ body{
     margin: auto;
     margin-top: 6rem;
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 75% 25%;
     gap: 20px;
 }
 .learning-grid{
@@ -523,7 +523,7 @@ body{
     .footer{
         display: block;
         justify-content: center;
-        text-align: center;   
+        text-align: center;
     }
     .footer-copy{
         margin-bottom: 12px;

@@ -1,29 +1,28 @@
 <script setup>
-import { Head, Link } from '@inertiajs/vue3';
-import '../../../public/asset/mystyle/landingpage.css';
+import { Head, Link } from "@inertiajs/vue3";
+import "../../../public/asset/mystyle/landingpage.css";
 
 defineProps({
-    canLogin: {
-        type: Boolean,
-    },
-    canRegister: {
-        type: Boolean,
-    },
-    laravelVersion: {
-        type: String,
-        required: true,
-    },
-    phpVersion: {
-        type: String,
-        required: true,
-    },
+  canLogin: {
+    type: Boolean,
+  },
+  canRegister: {
+    type: Boolean,
+  },
+  laravelVersion: {
+    type: String,
+    required: true,
+  },
+  phpVersion: {
+    type: String,
+    required: true,
+  },
 });
 </script>
 
 <template>
-
-    <Head title="Welcome" />
-    <!--
+  <Head title="Welcome" />
+  <!--
     <div
         class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white"
     >
@@ -198,299 +197,291 @@ defineProps({
     </div>
 </div>
 </div> -->
-    <!-- header and main home  -->
-    <section id="header-home">
-        <article>
-            <div class="header-mainer">
-                <div class="header">
-                    <div class="col header-left">
-                        <img src="../../../public/asset/photos/fevicon.png" alt="" class="header-logo">
-                        <h4>Blood Donation</h4>
-                    </div>
-                    <div class="col header-right">
-                        <div class="header-mobile">
-                            <div class="header-links">
-                                <ul>
-                                    <li>
-                                        <a href="#home-welcome" class="nav-link">HOME</a>
-                                    </li>
-                                    <li>
-                                        <a href="#home-welcome" class="nav-link">Why Give Blood</a>
-                                    </li>
-                                    <li>
-                                        <a href="#home-welcome" class="nav-link">Blood Banks</a>
-                                    </li>
-                                    <li>
-                                        <a href="#home-welcome" class="nav-link">Donation Program</a>
-                                    </li>
-                                    <li>
-                                        <a href="#footer" class="nav-link">About Us</a>
-                                    </li>
-                                    <!-- <li class="drop-hover">
-                                            <a href="./login.html" class="nav-link">MORE</a>
-                                            <div class="dropdown">
-                                                <div>
-                                                    <a href="#!">Sql</a>
-                                                </div>
-                                                <div>
-                                                    <a href="#!">Python</a>
-                                                </div>
-                                                <div>
-                                                    <a href="#!">Java</a>
-                                                </div>
-                                                <div>
-                                                    <a href="#!">Laravel</a>
-                                                </div>
-                                                <div>
-                                                    <a href="#!">BootStrap</a>
-                                                </div>
-                                                <div>
-                                                    <a href="#!">JavaScript</a>
-                                                </div>
-                                            </div>
-                                        </li> -->
-                                </ul>
-                            </div>
-                            <div class="header-contact">
-                                <ul>
-                                    <li>
-                                        <a href="" class="nav-link">
-                                            <i class="fa fa-brands fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="nav-link">
-                                            <i class="fa fa-brands fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="nav-link">
-                                            <i class="fa fa-brands fa-youtube"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="nav-link">
-                                            <i class="fa fa-brands fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-mobile">
-                        <i class="fa fa-align-right" id="menus"></i>
-                    </div>
-                </div>
+  <!-- header and main home  -->
+  <section id="header-home">
+    <article>
+      <div class="header-mainer">
+        <div class="header">
+          <div class="col header-left">
+            <img
+              src="../../../public/asset/photos/fevicon.png"
+              alt=""
+              class="header-logo"
+            />
+            <h4>Blood Donation</h4>
+          </div>
+          <div class="col header-right">
+            <div class="header-mobile">
+              <div class="header-links">
+                <ul>
+                  <li>
+                    <a href="#home-welcome" class="nav-link">HOME</a>
+                  </li>
+                  <li>
+                    <a href="#home-welcome" class="nav-link">Why Give Blood</a>
+                  </li>
+                  <li>
+                    <a href="#home-welcome" class="nav-link">Blood Banks</a>
+                  </li>
+                  <li>
+                    <a href="#home-welcome" class="nav-link">Donation Program</a>
+                  </li>
+                  <li>
+                    <a href="#footer" class="nav-link">About Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header-contact">
+                <ul>
+                  <li>
+                    <a href="" class="nav-link">
+                      <i class="fa fa-brands fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="nav-link">
+                      <i class="fa fa-brands fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="nav-link">
+                      <i class="fa fa-brands fa-youtube"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="nav-link">
+                      <i class="fa fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </article>
-        <!-- home page section  -->
-        <section id="home-welcome">
-            <div class="home">
-                <div class="home-content">
-                    <h4>Welcome To Blood Donation In Nigeria</h4>
-                    <p>Nigeria's blood donation shortfall highlights the need for increased <br> voluntary donors and
-                        improved donation infrastructure.</p>
-                    <div class="start">
-                        <div class="start-links">
-                            <Link :href="route('register')">Get Start</Link>
-                        </div>
-                        <div class="start-links">
-                            <Link :href="route('login')">Sign in</Link>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-bottom">
-                    <div class="content">
-                        <h4>Our Hospital Client</h4>
-                        <p>Look some our hospilat client and you can join them</p>
-                    </div>
-                </div>
+          </div>
+          <div class="menu-mobile">
+            <i class="fa fa-align-right" id="menus"></i>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- home page section  -->
+    <section id="home-welcome">
+      <div class="home">
+        <div class="home-content">
+          <h4>Welcome To Blood Donation In Nigeria</h4>
+          <p>
+            Nigeria's blood donation shortfall highlights the need for increased <br />
+            voluntary donors and improved donation infrastructure.
+          </p>
+          <div class="start">
+            <div class="start-links">
+              <Link :href="route('register')">Get Start</Link>
             </div>
-        </section>
-        <!-- home page section  -->
+            <div class="start-links">
+              <Link :href="route('login')">Sign in</Link>
+            </div>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="content">
+            <h4>Our Hospital Client</h4>
+            <p>Look some our hospilat client and you can join them</p>
+          </div>
+        </div>
+      </div>
     </section>
+    <!-- home page section  -->
+  </section>
 
-
-    <!-- maain body  -->
-    <main>
-        <section id="card-project">
-            <div class="learning">
-                <div class="learning-grid">
-                    <div class="social-pages">
-                        <article class="social-pages-likes shadow-lg bg-white">
-                            <div class="social-title">
-                                <h3>Facebook Page</h3>
-                            </div>
-                            <div class="social-content">
-                                <p>On our facebook page we are posting the new.</p>
-                            </div>
-                            <a href="#!" class="a-def">
-                                <div class="social-link">
-                                    <i class="fa fa-quote-left"></i>
-                                    <span> Web Developer Circle </span>
-                                    <i class="fa fa-quote-right"></i>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="social-pages-likes shadow-lg bg-white">
-                            <div class="social-title">
-                                <h3>Twitter Handle</h3>
-                            </div>
-                            <div class="social-content">
-                                <p>On our twitter handle we are posting the new.</p>
-                            </div>
-                            <a href="#!" class="a-def">
-                                <div class="social-link">
-                                    <i class="fa fa-quote-left"></i>
-                                    <span> Web Developer Circle </span>
-                                    <i class="fa fa-quote-right"></i>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="social-pages-likes shadow-lg bg-white">
-                            <div class="social-title">
-                                <h3 class="text-danger">Contact Us</h3>
-                            </div>
-                            <div class="block-contact">
-                                <form action="" method="post">
-                                    <div class="form-group">
-                                        <label for="">Your name <span class="text-danger">*</span></label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Your Email <span class="text-danger">*</span></label>
-                                        <input type="email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="">Message <span class="text-danger">*</span></label>
-                                        <textarea name="" id=""></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="button">Send</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </article>
-                    </div>
+  <!-- maain body  -->
+  <main>
+    <section id="card-project">
+      <div class="learning">
+        <div class="learning-grid">
+          <div class="grid grid:2 gap:20">
+            <article class="grid-col bg-white shadow-lg">
+              <div class="col-img">
+                <img
+                  src="../../../public/asset/photos/Gombe-Specialist-Hospital.webp"
+                  alt=""
+                />
+              </div>
+              <div class="col-contents">
+                <div class="col-title">
+                  <a href="#!">
+                    <h3>Gombe Specail List Hospital</h3>
+                  </a>
                 </div>
-                <div class="learning-grid">
-                    <div class="grid grid:2 gap:20">
-                        <article class="grid-col bg-white shadow-lg">
-                            <div class="col-img">
-                                <img src="../../../public/asset/photos/Gombe-Specialist-Hospital.webp" alt="">
-                            </div>
-                            <div class="col-contents">
-                                <div class="col-title">
-                                    <a href="#!">
-                                        <h3>Gombe Specail List Hospital</h3>
-                                    </a>
-                                </div>
-                                <div class="col-user">
-                                    <i class="fa fa-location-dot"></i>
-                                    <h5>Gombe State</h5>
-                                </div>
-                                <div class="col-content">
-                                    <p>This gombe specail list hospital is one the our client in gombe state nigeria ...
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="grid-col bg-white shadow-lg">
-                            <div class="col-img">
-                                <img src="../../../public/asset/photos/national.png" alt="">
-                            </div>
-                            <div class="col-contents">
-                                <div class="col-title">
-                                    <a href="#!">
-                                        <h3>National Hospital Abuja</h3>
-                                    </a>
-                                </div>
-                                <div class="col-user">
-                                    <i class="fa fa-location-dot"></i>
-                                    <h5>Abuja Capital City</h5>
-                                </div>
-                                <div class="col-content">
-                                    <p>This national hospital abuja is our client in abuja capital city nigeria ...</p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="grid-col bg-white shadow-lg">
-                            <div class="col-img">
-                                <img src="../../../public/asset/photos/Muhammadu-Buhari-Specialist-Hospital-1.png"
-                                    alt="">
-                            </div>
-                            <div class="col-contents">
-                                <div class="col-title">
-                                    <a href="#!">
-                                        <h3>Muhammadu Buhari Specialist Hospital</h3>
-                                    </a>
-                                </div>
-                                <div class="col-user">
-                                    <i class="fa fa-location-dot"></i>
-                                    <h5>kano State</h5>
-                                </div>
-                                <div class="col-content">
-                                    <p>This kano buhari specialist hospital is one the our client in kano state nigeria
-                                        ...
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="grid-col bg-white shadow-lg">
-                            <div class="col-img">
-                                <img src="../../../public/asset/photos/LIMH-Building-Front-View-1-1024x683.jpeg" alt="">
-                            </div>
-                            <div class="col-contents">
-                                <div class="col-title">
-                                    <a href="#!">
-                                        <h3>Lagos Island Maternity Hospital</h3>
-                                    </a>
-                                </div>
-                                <div class="col-user">
-                                    <i class="fa fa-location-dot"></i>
-                                    <h5>Lagos State</h5>
-                                </div>
-                                <div class="col-content">
-                                    <p>This lagos island maternity hospital is one of our client in lagos state nigeria
-                                        ...
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                <div class="col-user">
+                  <i class="fa fa-location-dot"></i>
+                  <h5>Gombe State</h5>
                 </div>
-            </div>
-        </section>
-        <br><br><br><br>
-    </main>
+                <div class="col-content">
+                  <p>
+                    This gombe specail list hospital is one the our client in gombe state
+                    nigeria ...
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="grid-col bg-white shadow-lg">
+              <div class="col-img">
+                <img src="../../../public/asset/photos/national.png" alt="" />
+              </div>
+              <div class="col-contents">
+                <div class="col-title">
+                  <a href="#!">
+                    <h3>National Hospital Abuja</h3>
+                  </a>
+                </div>
+                <div class="col-user">
+                  <i class="fa fa-location-dot"></i>
+                  <h5>Abuja Capital City</h5>
+                </div>
+                <div class="col-content">
+                  <p>
+                    This national hospital abuja is our client in abuja capital city
+                    nigeria ...
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="grid-col bg-white shadow-lg">
+              <div class="col-img">
+                <img
+                  src="../../../public/asset/photos/Muhammadu-Buhari-Specialist-Hospital-1.png"
+                  alt=""
+                />
+              </div>
+              <div class="col-contents">
+                <div class="col-title">
+                  <a href="#!">
+                    <h3>Muhammadu Buhari Specialist Hospital</h3>
+                  </a>
+                </div>
+                <div class="col-user">
+                  <i class="fa fa-location-dot"></i>
+                  <h5>kano State</h5>
+                </div>
+                <div class="col-content">
+                  <p>
+                    This kano buhari specialist hospital is one the our client in kano
+                    state nigeria ...
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="grid-col bg-white shadow-lg">
+              <div class="col-img">
+                <img
+                  src="../../../public/asset/photos/LIMH-Building-Front-View-1-1024x683.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="col-contents">
+                <div class="col-title">
+                  <a href="#!">
+                    <h3>Lagos Island Maternity Hospital</h3>
+                  </a>
+                </div>
+                <div class="col-user">
+                  <i class="fa fa-location-dot"></i>
+                  <h5>Lagos State</h5>
+                </div>
+                <div class="col-content">
+                  <p>
+                    This lagos island maternity hospital is one of our client in lagos
+                    state nigeria ...
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="learning-grid">
+          <div class="social-pages">
+            <article class="social-pages-likes shadow-lg bg-white">
+              <div class="social-title">
+                <h3>Facebook Page</h3>
+              </div>
+              <div class="social-content">
+                <p>On our facebook page we are posting the new.</p>
+              </div>
+              <a href="#!" class="a-def">
+                <div class="social-link">
+                  <i class="fa fa-quote-left"></i>
+                  <span> Web Developer Circle </span>
+                  <i class="fa fa-quote-right"></i>
+                </div>
+              </a>
+            </article>
+            <article class="social-pages-likes shadow-lg bg-white">
+              <div class="social-title">
+                <h3>Twitter Handle</h3>
+              </div>
+              <div class="social-content">
+                <p>On our twitter handle we are posting the new.</p>
+              </div>
+              <a href="#!" class="a-def">
+                <div class="social-link">
+                  <i class="fa fa-quote-left"></i>
+                  <span> Web Developer Circle </span>
+                  <i class="fa fa-quote-right"></i>
+                </div>
+              </a>
+            </article>
+            <article class="social-pages-likes shadow-lg bg-white">
+              <div class="social-title">
+                <h3 class="text-danger">Contact Us</h3>
+              </div>
+              <div class="block-contact">
+                <form action="" method="post">
+                  <div class="form-group">
+                    <label for="">Your name <span class="text-danger">*</span></label>
+                    <input type="text" />
+                  </div>
+                  <div class="form-group">
+                    <label for="">Your Email <span class="text-danger">*</span></label>
+                    <input type="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="">Message <span class="text-danger">*</span></label>
+                    <textarea name="" id=""></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button type="button">Send</button>
+                  </div>
+                </form>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br /><br /><br /><br />
+  </main>
 
+  <!-- arrow top to top  -->
+  <div class="arrow">
+    <i class="fa fa-angle-up"></i>
+  </div>
 
-    <!-- arrow top to top  -->
-    <div class="arrow">
-        <i class="fa fa-angle-up"></i>
+  <footer class="footer">
+    <div class="footer-copy">copyright &copy; 2024 mrcode web design</div>
+    <div class="footer-icons">
+      <div class="footer-links">
+        <a href="#">
+          <i class="fa fa-brands fa-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-brands fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-brands fa-youtube"></i>
+        </a>
+      </div>
     </div>
-
-    <footer class="footer">
-        <div class="footer-copy">
-            copyright &copy; 2024 mrcode web design
-        </div>
-        <div class="footer-icons">
-            <div class="footer-links">
-                <a href="#">
-                    <i class="fa fa-brands fa-facebook"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-brands fa-twitter"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-brands fa-youtube"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-
+  </footer>
 </template>
-
