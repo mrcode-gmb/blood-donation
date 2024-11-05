@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blood;
 use Carbon\Carbon;
+use App\Models\User;
 use Inertia\Inertia;
+use App\Mail\BloodAdded;
 use App\Models\BloodUsage;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\BloodInventory;
 use App\Models\HospitalDetails;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Crypt;
 
 class BloodInventoryController extends Controller
@@ -76,8 +81,13 @@ class BloodInventoryController extends Controller
             'collection_date' => $request->collection_date,
             'expiry_date' => $request->expiry_date,
         ]);
-
+        $user = Auth::user()->name;
+        $bloodType = Blood::where("id", $request->blood_group)->get()[0]->blood_name;
+        $quantity = $request->quantity;
+        $addedDate = $request->collection_date;
+        $expirationDate = $request->expiry_date;
         if ($bloodInventory) {
+            Mail::to(Auth::user()->email)->send(new BloodAdded($user, $bloodType, $quantity, $addedDate, $expirationDate));
             return response()->json([
                 'status' => Response::HTTP_OK,
             ]);

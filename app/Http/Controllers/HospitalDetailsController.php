@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Approved;
+use App\Mail\Rejected;
 use App\Models\Blood;
 use App\Models\BloodInventory;
 use App\Models\DonorDetails;
@@ -14,6 +16,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use Inertia\Inertia;
+use Mail;
 
 class HospitalDetailsController extends Controller
 {
@@ -137,6 +140,7 @@ class HospitalDetailsController extends Controller
                 'role' => 4,
                 'is_active' => 1,
             ]);
+
             return response()->json([
                 'status' => Response::HTTP_OK,
             ]);
@@ -370,13 +374,23 @@ class HospitalDetailsController extends Controller
         $request->validate([
             'selectVal' => 'required',
         ]);
-        $user = User::where('id', $id)->update([
+        $users = User::where('id', $id)->update([
             'is_active' => $request->selectVal,
         ]);
-        if ($user) {
-            return response()->json([
-                'status' => Response::HTTP_OK,
-            ]);
+        $user = User::where("id", $id)->get()[0]->name;
+        if ($users) {
+            if(User::where("id", $id)->get()[0]->is_active == 2){
+                Mail::to(User::where("id", $id)->get()[0]->email)->send(new Approved($user));
+                return response()->json([
+                    'status' => Response::HTTP_OK,
+                ]);
+            }
+            else{
+                Mail::to(User::where("id", $id)->get()[0]->email)->send(new Rejected($user));
+                return response()->json([
+                    'status' => Response::HTTP_OK,
+                ]);
+            }
         }
         return response()->json([
             'status' => Response::HTTP_ALREADY_REPORTED,

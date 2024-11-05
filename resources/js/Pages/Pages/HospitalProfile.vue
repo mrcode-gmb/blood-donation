@@ -47,6 +47,7 @@ const submitStatus = function (bool) {
       .then((success) => {
         if (success.data.status == 200) {
           toast.success("Updated status sucessfully");
+          document.getElementById("editModal").style.display = "none";
           location.reload();
         } else {
           toast.error("Somthing went wrong");
@@ -55,6 +56,8 @@ const submitStatus = function (bool) {
       .catch((error) => {
         if (error.response && error.response.status === 422) {
           toast.error("Please select status");
+        } else {
+          toast.error("Somthing went wrong");
         }
       });
   }
@@ -144,6 +147,14 @@ const submitBloodBank = (id) => {
         toast.error("Please fieald the form");
       }
     });
+};
+
+const closeModel = (param) => {
+  if (param) {
+    document.getElementById("editModal").style.display = "none";
+    document.getElementById("addBloodBank").style.display = "none";
+
+  }
 };
 
 window.onclick = (e) => {
@@ -245,7 +256,13 @@ window.onclick = (e) => {
                             </div>
                             <div class="modal-footer">
                               <button>Save</button>
-                              <button class="delete" type="button">Close</button>
+                              <button
+                                class="delete"
+                                type="button"
+                                @click="closeModel(true)"
+                              >
+                                Close
+                              </button>
                             </div>
                           </form>
                           <input
@@ -350,7 +367,13 @@ window.onclick = (e) => {
                     @keyup="searchBlood(true)"
                     id="searchBarBlood"
                   />
-                  <div class="button" v-if="$page.props.auth.user.id == hospotals[0].user_id_none" @click="addBloodBankModel">Add blood</div>
+                  <div
+                    class="button"
+                    v-if="$page.props.auth.user.id == hospotals[0].user_id_none"
+                    @click="addBloodBankModel"
+                  >
+                    Add blood
+                  </div>
                 </div>
               </div>
               <div class="table-body">
@@ -465,7 +488,7 @@ window.onclick = (e) => {
                       </div>
                       <div class="modal-footer">
                         <button :disabled="bloodForm.processing">Save</button>
-                        <button class="delete" type="button">Close</button>
+                        <button class="delete" type="button" @click="closeModel(true)">Close</button>
                       </div>
                     </form>
                   </div>

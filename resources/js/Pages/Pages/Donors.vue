@@ -31,6 +31,14 @@ const openModal = (id) => {
     }
 }
 
+const closeModal = (id) => {
+    if (id) {
+        let modalSaves = document.getElementById("" + id);
+        modalSaves.style.display = "none"
+        // alert(id);
+    }
+}
+
 const form = useForm({
     selectVal: '',
 })
@@ -181,7 +189,7 @@ const search = (choose) => {
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button>Save</button>
-                                                        <button class="delete" type="button">Close</button>
+                                                        <button class="delete" type="button" @click="closeModal(donor.id)">Close</button>
                                                     </div>
                                                 </form>
                                                 <input type="hidden" :value="donor.user_id"

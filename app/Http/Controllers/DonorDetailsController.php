@@ -6,6 +6,8 @@ use App\Models\User;
 use Inertia\Inertia;
 use App\Models\Blood;
 use App\Models\State;
+use App\Mail\Approved;
+use App\Mail\Rejected;
 use App\Models\DonorDetails;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -14,6 +16,7 @@ use App\Models\DonorGivenBlood;
 use App\Models\HospitalDetails;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Response as FacadesResponse;
 
@@ -149,14 +152,24 @@ class DonorDetailsController extends Controller
             ]);
         }
 
-        $user = User::where("id", Crypt::decrypt($id))->update([
+        $users = User::where("id", Crypt::decrypt($id))->update([
             'is_active'     => $request->selectVal
         ]);
 
-        if($user){
-            return response()->json([
-                "status"    => Response::HTTP_OK,
-            ]);
+        $user = User::where("id", Crypt::decrypt($id))->get()[0]->name;
+        if($users){
+            if(User::where("id", Crypt::decrypt($id))->get()[0]->is_active == 2){
+                Mail::to(User::where("id", Crypt::decrypt($id))->get()[0]->email)->send(new Approved($user));
+                return response()->json([
+                    'status' => Response::HTTP_OK,
+                ]);
+            }
+            else{
+                Mail::to(User::where("id", Crypt::decrypt($id))->get()[0]->email)->send(new Rejected($user));
+                return response()->json([
+                    'status' => Response::HTTP_OK,
+                ]);
+            }
         }
 
         return response()->json([
