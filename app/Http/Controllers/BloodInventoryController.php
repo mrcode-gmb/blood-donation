@@ -140,6 +140,7 @@ class BloodInventoryController extends Controller
         $saveBlood = BloodUsage::create([
             'blood_inventory_id' => Crypt::decrypt($inventId),
             'hospital_details_id' => Auth::user()->hostpitalDetails->id,
+            "hospital_details_id_own" => decrypt($id),
             'comment' => $request->comment,
             'burking_date' => date("d M, Y h:i"),
         ]);
@@ -161,10 +162,13 @@ class BloodInventoryController extends Controller
 
     public function usageBlood()
     {
-        $bloodInventory = BloodUsage::where("hospital_details_id", Auth::user()->hostpitalDetails->id)->with("blooIventory")
+        $bloodInventory = BloodUsage::where("hospital_details_id", Auth::user()->hostpitalDetails->id)
+            ->where("status", 1)
+            ->orWhere("hospital_details_id_own", Auth::user()->hostpitalDetails->id)
+            ->with("blooIventory")
             ->get()
             ->transform(fn($invent) => [
-                'id' => $invent->id ?? null,
+                'id' => $invent->blooIventory->id ?? null,
                 'blood_usage_id' => Crypt::encrypt($invent->id) ?? null,
                 'hospitalId' => $invent->hospitalDetails->id ?? null,
                 'hospital_id' => Crypt::encrypt($invent->blooIventory->hospitalDetails->id) ?? null,
@@ -182,10 +186,45 @@ class BloodInventoryController extends Controller
                 'comment' => $invent->comment,
                 'blood_usageid' => encrypt($invent->id),
                 'burking_date' => $invent->burking_date,
+                'status' => $invent->status ?? null,
                 'accept_date' => ($invent->accept_date == null) ? "Not collect" : $invent->accept_date,
             ]);
 
         return Inertia::render("Pages/BlooIUsage", ['bloodInventory' => $bloodInventory]);
+    }
+
+    public function requestedBlood()
+    {
+        $bloodInventory = BloodUsage::where("hospital_details_id", Auth::user()->hostpitalDetails->id)
+            ->orWhere("hospital_details_id_own", Auth::user()->hostpitalDetails->id)
+            ->where("status", 0)
+            ->with(["blooIventory","hospitalDetails"])
+            ->get()
+            ->transform(fn($invent) => [
+                'id' => $invent->blooIventory->id ?? null,
+                'blood_usage_id' => Crypt::encrypt($invent->id) ?? null,
+                'hospitalId' => $invent->hospitalDetails->id ?? null,
+                'hospital_id' => Crypt::encrypt($invent->blooIventory->hospitalDetails->id) ?? null,
+                'hospital_id_he' => $invent->blooIventory->hospital_details_id,
+                'hospital_id_own' => Auth::user()->hostpitalDetails->id,
+                'hospital_name' => $invent->hospitalDetails->hostpital_name,
+                'hospital_city' => $invent->blooIventory->hospitalDetails->lgas->stateNames->state,
+                'hospital_lga' => $invent->blooIventory->hospitalDetails->lgas->lga_name,
+                'user_id' => $invent->blooIventory->hospitalDetails->user_id,
+                'blood_id' => $invent->blooIventory->bloodGroup->id,
+                'blood_group' => $invent->blooIventory->bloodGroup->blood_name,
+                'blood_component' => $invent->blooIventory->blood_component,
+                'quantity' => $invent->blooIventory->quantity,
+                'collection_date' => $invent->blooIventory->collection_date,
+                'expiry_date' => $invent->blooIventory->expiry_date,
+                'is_active' => $invent->blooIventory->is_active,
+                'comment' => $invent->comment,
+                'blood_usageid' => encrypt($invent->id),
+                'burking_date' => $invent->burking_date,
+                'status' => $invent->status ?? null,
+                'accept_date' => ($invent->accept_date == null) ? "Not collect" : $invent->accept_date,
+            ]);
+        return Inertia::render("Pages/BloodRequested", ['bloodInventory' => $bloodInventory]);
     }
 
     public function accepted(Request $request, $id, $inventId)

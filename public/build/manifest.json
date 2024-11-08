@@ -1,21 +1,21 @@
 {
-  "_AuthenticatedLayout-DR5DJ9lV.js": {
-    "file": "assets/AuthenticatedLayout-DR5DJ9lV.js",
+  "_AuthenticatedLayout-BPQNO3Dn.js": {
+    "file": "assets/AuthenticatedLayout-BPQNO3Dn.js",
     "name": "AuthenticatedLayout",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_PrimaryButton-VMnVD0lh.js": {
-    "file": "assets/PrimaryButton-VMnVD0lh.js",
+  "_PrimaryButton-DPdNoQ9m.js": {
+    "file": "assets/PrimaryButton-DPdNoQ9m.js",
     "name": "PrimaryButton",
     "imports": [
-      "_TextInput-nt0ja9Ba.js",
+      "_TextInput-BjAZxj63.js",
       "resources/js/app.js"
     ]
   },
-  "_TextInput-nt0ja9Ba.js": {
-    "file": "assets/TextInput-nt0ja9Ba.js",
+  "_TextInput-BjAZxj63.js": {
+    "file": "assets/TextInput-BjAZxj63.js",
     "name": "TextInput",
     "imports": [
       "resources/js/app.js"
@@ -54,7 +54,7 @@
     "src": "public/asset/photos/national.png"
   },
   "resources/js/Pages/Auth/ConfirmPassword.vue": {
-    "file": "assets/ConfirmPassword-C3WKiGY3.js",
+    "file": "assets/ConfirmPassword-CIpRDoyE.js",
     "name": "ConfirmPassword",
     "src": "resources/js/Pages/Auth/ConfirmPassword.vue",
     "isDynamicEntry": true,
@@ -63,7 +63,7 @@
     ]
   },
   "resources/js/Pages/Auth/ForgotPassword.vue": {
-    "file": "assets/ForgotPassword-D0eb9fsZ.js",
+    "file": "assets/ForgotPassword-CPEJaRcc.js",
     "name": "ForgotPassword",
     "src": "resources/js/Pages/Auth/ForgotPassword.vue",
     "isDynamicEntry": true,
@@ -72,7 +72,7 @@
     ]
   },
   "resources/js/Pages/Auth/Login.vue": {
-    "file": "assets/Login-DYIg07vk.js",
+    "file": "assets/Login-DXQoP-Ty.js",
     "name": "Login",
     "src": "resources/js/Pages/Auth/Login.vue",
     "isDynamicEntry": true,
@@ -81,7 +81,7 @@
     ]
   },
   "resources/js/Pages/Auth/Register.vue": {
-    "file": "assets/Register-BmlIAVoc.js",
+    "file": "assets/Register-CzT8otu3.js",
     "name": "Register",
     "src": "resources/js/Pages/Auth/Register.vue",
     "isDynamicEntry": true,
@@ -90,7 +90,7 @@
     ]
   },
   "resources/js/Pages/Auth/ResetPassword.vue": {
-    "file": "assets/ResetPassword-C4DiVtoE.js",
+    "file": "assets/ResetPassword-COQqrRI6.js",
     "name": "ResetPassword",
     "src": "resources/js/Pages/Auth/ResetPassword.vue",
     "isDynamicEntry": true,
@@ -99,7 +99,7 @@
     ]
   },
   "resources/js/Pages/Auth/VerifyEmail.vue": {
-    "file": "assets/VerifyEmail-BOezjmqN.js",
+    "file": "assets/VerifyEmail-Cx_E3E4i.js",
     "name": "VerifyEmail",
     "src": "resources/js/Pages/Auth/VerifyEmail.vue",
     "isDynamicEntry": true,
@@ -108,17 +108,17 @@
     ]
   },
   "resources/js/Pages/Dashboard.vue": {
-    "file": "assets/Dashboard-BQagvZiu.js",
+    "file": "assets/Dashboard-j7n4xTqZ.js",
     "name": "Dashboard",
     "src": "resources/js/Pages/Dashboard.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_AuthenticatedLayout-DR5DJ9lV.js",
+      "_AuthenticatedLayout-BPQNO3Dn.js",
       "resources/js/app.js"
     ]
   },
   "resources/js/Pages/Pages/BlooIUsage.vue": {
-    "file": "assets/BlooIUsage-CHhsunXu.js",
+    "file": "assets/BlooIUsage-C6qCWaw4.js",
     "name": "BlooIUsage",
     "src": "resources/js/Pages/Pages/BlooIUsage.vue",
     "isDynamicEntry": true,
@@ -127,7 +127,7 @@
     ]
   },
   "resources/js/Pages/Pages/BlooInventory.vue": {
-    "file": "assets/BlooInventory-D3yOdcGe.js",
+    "file": "assets/BlooInventory-Dc--KMFM.js",
     "name": "BlooInventory",
     "src": "resources/js/Pages/Pages/BlooInventory.vue",
     "isDynamicEntry": true,
@@ -136,7 +136,7 @@
     ]
   },
   "resources/js/Pages/Pages/BloodExpired.vue": {
-    "file": "assets/BloodExpired-DMp9jgaY.js",
+    "file": "assets/BloodExpired-spwgJIDp.js",
     "name": "BloodExpired",
     "src": "resources/js/Pages/Pages/BloodExpired.vue",
     "isDynamicEntry": true,
@@ -145,7 +145,7 @@
     ]
   },
   "resources/js/Pages/Pages/BloodExpireds.vue": {
-    "file": "assets/BloodExpireds-Bqr4mVf9.js",
+    "file": "assets/BloodExpireds-CQrs_GaS.js",
     "name": "BloodExpireds",
     "src": "resources/js/Pages/Pages/BloodExpireds.vue",
     "isDynamicEntry": true,
@@ -153,8 +153,17 @@
       "resources/js/app.js"
     ]
   },
+  "resources/js/Pages/Pages/BloodRequested.vue": {
+    "file": "assets/BloodRequested-BRqY7i30.js",
+    "name": "BloodRequested",
+    "src": "resources/js/Pages/Pages/BloodRequested.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
   "resources/js/Pages/Pages/DonorGivenBlood.vue": {
-    "file": "assets/DonorGivenBlood-DzYR9f84.js",
+    "file": "assets/DonorGivenBlood-CaDtosra.js",
     "name": "DonorGivenBlood",
     "src": "resources/js/Pages/Pages/DonorGivenBlood.vue",
     "isDynamicEntry": true,
@@ -163,7 +172,7 @@
     ]
   },
   "resources/js/Pages/Pages/DonorProfile.vue": {
-    "file": "assets/DonorProfile-DpSnOolN.js",
+    "file": "assets/DonorProfile-0maigxOM.js",
     "name": "DonorProfile",
     "src": "resources/js/Pages/Pages/DonorProfile.vue",
     "isDynamicEntry": true,
@@ -172,7 +181,7 @@
     ]
   },
   "resources/js/Pages/Pages/Donors.vue": {
-    "file": "assets/Donors-D3gsCXrb.js",
+    "file": "assets/Donors-DAAf5kwp.js",
     "name": "Donors",
     "src": "resources/js/Pages/Pages/Donors.vue",
     "isDynamicEntry": true,
@@ -181,7 +190,7 @@
     ]
   },
   "resources/js/Pages/Pages/HospitalProfile.vue": {
-    "file": "assets/HospitalProfile-BNo6xgri.js",
+    "file": "assets/HospitalProfile-Cb6SueC5.js",
     "name": "HospitalProfile",
     "src": "resources/js/Pages/Pages/HospitalProfile.vue",
     "isDynamicEntry": true,
@@ -190,12 +199,12 @@
       "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
-      "_TextInput-nt0ja9Ba.js",
-      "_PrimaryButton-VMnVD0lh.js"
+      "_TextInput-BjAZxj63.js",
+      "_PrimaryButton-DPdNoQ9m.js"
     ]
   },
   "resources/js/Pages/Pages/Hospitals.vue": {
-    "file": "assets/Hospitals-Bcw8X5Ee.js",
+    "file": "assets/Hospitals-CyN3RmAv.js",
     "name": "Hospitals",
     "src": "resources/js/Pages/Pages/Hospitals.vue",
     "isDynamicEntry": true,
@@ -204,54 +213,54 @@
     ]
   },
   "resources/js/Pages/Profile/Edit.vue": {
-    "file": "assets/Edit-AdOa_1zW.js",
+    "file": "assets/Edit-FKt63zfd.js",
     "name": "Edit",
     "src": "resources/js/Pages/Profile/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_AuthenticatedLayout-DR5DJ9lV.js",
+      "_AuthenticatedLayout-BPQNO3Dn.js",
       "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
       "resources/js/app.js",
-      "_TextInput-nt0ja9Ba.js",
-      "_PrimaryButton-VMnVD0lh.js"
+      "_TextInput-BjAZxj63.js",
+      "_PrimaryButton-DPdNoQ9m.js"
     ]
   },
   "resources/js/Pages/Profile/Partials/DeleteUserForm.vue": {
-    "file": "assets/DeleteUserForm-C9PxsGze.js",
+    "file": "assets/DeleteUserForm-BgzWJ3zd.js",
     "name": "DeleteUserForm",
     "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_TextInput-nt0ja9Ba.js"
+      "_TextInput-BjAZxj63.js"
     ]
   },
   "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue": {
-    "file": "assets/UpdatePasswordForm-Bl9xdAQG.js",
+    "file": "assets/UpdatePasswordForm-BsnrE1rS.js",
     "name": "UpdatePasswordForm",
     "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_TextInput-nt0ja9Ba.js",
-      "_PrimaryButton-VMnVD0lh.js"
+      "_TextInput-BjAZxj63.js",
+      "_PrimaryButton-DPdNoQ9m.js"
     ]
   },
   "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue": {
-    "file": "assets/UpdateProfileInformationForm-Dvl-GVae.js",
+    "file": "assets/UpdateProfileInformationForm-HqVYFeqC.js",
     "name": "UpdateProfileInformationForm",
     "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_TextInput-nt0ja9Ba.js",
-      "_PrimaryButton-VMnVD0lh.js"
+      "_TextInput-BjAZxj63.js",
+      "_PrimaryButton-DPdNoQ9m.js"
     ]
   },
   "resources/js/Pages/Welcome.vue": {
-    "file": "assets/Welcome-BzC0w2dF.js",
+    "file": "assets/Welcome-BJD5kS8n.js",
     "name": "Welcome",
     "src": "resources/js/Pages/Welcome.vue",
     "isDynamicEntry": true,
@@ -271,7 +280,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-Bev9O1Bh.js",
+    "file": "assets/app-cVKuo59C.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -287,6 +296,7 @@
       "resources/js/Pages/Pages/BlooInventory.vue",
       "resources/js/Pages/Pages/BloodExpired.vue",
       "resources/js/Pages/Pages/BloodExpireds.vue",
+      "resources/js/Pages/Pages/BloodRequested.vue",
       "resources/js/Pages/Pages/DonorGivenBlood.vue",
       "resources/js/Pages/Pages/DonorProfile.vue",
       "resources/js/Pages/Pages/Donors.vue",

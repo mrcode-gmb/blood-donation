@@ -128,6 +128,7 @@ const search = (choose) => {
                                         <th>Lga</th>
                                         <th>Home address</th>
                                         <th>Why app</th>
+                                        <th>Blood certificate</th>
                                         <th>App status</th>
                                     </tr>
                                     <tr class="searchtab" v-for="donor in donors" :key="donor.id">
@@ -142,6 +143,9 @@ const search = (choose) => {
                                         <td>{{ donor.lga_names }}</td>
                                         <td>{{ donor.home_address }}</td>
                                         <td>{{ donor.reason }}</td>
+                                        <td>
+                                        <a :href="donor.blood_certificate">Blood certificate</a>
+                                        </td>
                                         <td>
                                             <div v-if="$page.props.auth.user.role == 1">
                                                 <div class="status" v-if="donor.is_active == 1"

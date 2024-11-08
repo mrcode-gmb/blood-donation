@@ -73,7 +73,7 @@ const searchBlood = (choose) => {
 <template>
     <div>
 
-        <Head title="Apply" />
+        <Head title="Blood Request" />
         <!-- Link side var and header here  -->
         <HeadNav />
 
@@ -86,7 +86,7 @@ const searchBlood = (choose) => {
                             <i class="fa fa-home"></i>
                             <div class="db">
                                 <h4>Dashboard / &nbsp;</h4>
-                                <p>Blood Usage | Accepted</p>
+                                <p>Blood Request</p>
                             </div>
                         </div>
 
@@ -96,13 +96,13 @@ const searchBlood = (choose) => {
                                     <i class="fa fa-check-circle"></i>
                                 </div>
                                 <div class="circle-text">
-                                    <p>Your Blood Usage | Accepted a blood from other hospitals </p>
+                                    <p>Your Blood Request from other hospitals </p>
                                 </div>
                             </div>
                         </div>
                         <div class="table-st" id="bloodBanks">
                             <div class="table-st-head">
-                                <h4>Blood Usage | Accepted</h4>
+                                <h4>Blood Request</h4>
                                 <div class="input-seach">
                                     <input type="text" placeholder="Search" @keyup="searchBlood(true)"
                                         id="searchBarBlood">
@@ -144,7 +144,7 @@ const searchBlood = (choose) => {
                                             </div>
                                         </td>
                                         <td class="text-center">
-                                            <a href="#!" @click="openModal(bloodInventories.id)" v-if="bloodInventories.accept_date == 'Not collect'">
+                                            <a href="#!" @click="openModal(bloodInventories.id)" v-if="bloodInventories.hospital_id_he == bloodInventories.hospital_id_own">
                                                 <i class="fa fa-plus-circle view"></i>
                                             </a>
                                         </td>

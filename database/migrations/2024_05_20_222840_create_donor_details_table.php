@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string("gender");
             $table->string("home_address");
             $table->string("reason");
+            $table->string("blood_certificate")->nullable();
             $table->timestamps();
         });
     }

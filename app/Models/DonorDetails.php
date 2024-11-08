@@ -18,7 +18,8 @@ class DonorDetails extends Model
         'home_address',
         'reason',
         'gender',
-        'state_id'
+        'state_id',
+        "blood_certificate",
     ];
 
 

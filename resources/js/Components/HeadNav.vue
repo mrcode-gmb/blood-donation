@@ -162,6 +162,14 @@ const closeMobileMenu = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link :href="route('bloodInvertory.requestedBlood')">
+                    <div class="link-hover">
+                      <i class="fa fa-heart-broken"></i>
+                      <span>Blood Request</span>
+                    </div>
+                  </Link>
+                </li>
+                <li>
                   <Link href="/blood-bank/usage">
                     <div class="link-hover">
                       <i class="fa fa-history"></i>

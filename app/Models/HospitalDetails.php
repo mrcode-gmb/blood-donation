@@ -34,6 +34,7 @@ class HospitalDetails extends Model
         'notes',
         'accreditation_status',
         'csc_license',
+        "csc_certificate"
 
     ];
 
@@ -55,5 +56,9 @@ class HospitalDetails extends Model
     public function donorGivenBlood()
     {
         return $this->hasOne(DonorGivenBlood::class, 'hospital_details_id', 'id');
+    }
+    public function bloodUsage()
+    {
+        return $this->hasMany(BloodUsage::class, 'hospital_details_id', 'id');
     }
 }

@@ -49,6 +49,7 @@ return new class extends Migration
             $table->string("operating_license")->nullable();
             $table->string("csc_license")->nullable();
             $table->text('notes')->nullable();
+            $table->string("csc_certificate")->nullable();
             $table->timestamps();
         });
     }

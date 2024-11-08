@@ -17,9 +17,11 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(BloodInventory::class)->constrained();
             $table->foreignIdFor(HospitalDetails::class)->constrained();
+            $table->string("hospital_details_id_own")->nullable();
             $table->string("comment")->nullable();
             $table->string("burking_date")->nullable();
             $table->string("accept_date")->nullable();
+            $table->string("status")->default(0);
             $table->timestamps();
         });
     }

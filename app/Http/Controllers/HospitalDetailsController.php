@@ -63,6 +63,7 @@ class HospitalDetailsController extends Controller
                 'notes' => $hospital->notes,
                 'accreditation_status' => $hospital->accreditation_status,
                 'csc_license' => $hospital->csc_license,
+                "csc_certificate" => asset("storage/" . $hospital->csc_certificate) ?? null
 
             ]);
         return Inertia::render("Pages/Hospitals")->with('hospotals', $hospotal);
@@ -97,7 +98,7 @@ class HospitalDetailsController extends Controller
             'hospital_address' => 'required',
 
             'hospital_contact' => 'required',
-            'hospital_email' => 'required',
+            'email' => 'required|string|lowercase|email|max:255|unique:' . HospitalDetails::class,
 
             'blood_donation_center_availability' => 'required',
             'emergency_services_availability' => 'required',
@@ -110,6 +111,7 @@ class HospitalDetailsController extends Controller
             'doctor_name' => 'required',
             'doctor_gsm' => 'required',
             'doctor_email' => 'required',
+            "csc_certificate" => "required|file|max:2048"
         ]);
 
         $hospotal = HospitalDetails::create([
@@ -120,7 +122,7 @@ class HospitalDetailsController extends Controller
             'lga_id' => $request->hospital_lga,
             'postal_code' => $request->hospital_postal_code,
             'phone' => $request->hospital_contact,
-            'email' => $request->hospital_email,
+            'email' => $request->email,
             'website' => $request->hospital_website,
             'operating_hours' => 24,
             'blood_donation_center' => $request->blood_donation_center_availability,
@@ -134,6 +136,7 @@ class HospitalDetailsController extends Controller
             'primary_contact_phone' => $request->doctor_gsm,
             'primary_contact_email' => $request->doctor_email,
             'notes' => $request->notes,
+            "csc_certificate" => $request->file("csc_certificate")->store("uploads", "public"),
         ]);
         if ($hospotal) {
             User::where('id', Auth::user()->id)->update([
@@ -379,13 +382,12 @@ class HospitalDetailsController extends Controller
         ]);
         $user = User::where("id", $id)->get()[0]->name;
         if ($users) {
-            if(User::where("id", $id)->get()[0]->is_active == 2){
+            if (User::where("id", $id)->get()[0]->is_active == 2) {
                 Mail::to(User::where("id", $id)->get()[0]->email)->send(new Approved($user));
                 return response()->json([
                     'status' => Response::HTTP_OK,
                 ]);
-            }
-            else{
+            } else {
                 Mail::to(User::where("id", $id)->get()[0]->email)->send(new Rejected($user));
                 return response()->json([
                     'status' => Response::HTTP_OK,
@@ -399,28 +401,27 @@ class HospitalDetailsController extends Controller
 
     public function donorGivenBlood()
     {
-        if(Auth::user()->role == 1){
-            $giveBlood = DonorGivenBlood::with('hospitalDetails')->with("users")->with("bloodGroup")->get()->transform(fn($data)=>[
-                'hospital_name'     => $data->hospitalDetails->hostpital_name,
-                'hospital_city'     => $data->hospitalDetails->lgas->stateNames->state,
-                'donor_name'        => $data->users->name,
-                'donor_email'        => $data->users->email,
-                'blood_group'        => $data->bloodGroup->blood_name,
-                'id'        => $data->id,
-                'quantity'        => $data->quantity,
-                'collection_date'        => $data->collection_date,
+        if (Auth::user()->role == 1) {
+            $giveBlood = DonorGivenBlood::with('hospitalDetails')->with("users")->with("bloodGroup")->get()->transform(fn($data) => [
+                'hospital_name' => $data->hospitalDetails->hostpital_name,
+                'hospital_city' => $data->hospitalDetails->lgas->stateNames->state,
+                'donor_name' => $data->users->name,
+                'donor_email' => $data->users->email,
+                'blood_group' => $data->bloodGroup->blood_name,
+                'id' => $data->id,
+                'quantity' => $data->quantity,
+                'collection_date' => $data->collection_date,
             ]);
-        }
-        else{
-            $giveBlood = DonorGivenBlood::where("hospital_details_id", Auth::user()->hostpitalDetails->id)->with('hospitalDetails')->with("users")->with("bloodGroup")->get()->transform(fn($data)=>[
-                'hospital_name'     => $data->hospitalDetails->hostpital_name,
-                'hospital_city'     => $data->hospitalDetails->lgas->stateNames->state,
-                'donor_name'        => $data->users->name,
-                'donor_email'        => $data->users->email,
-                'blood_group'        => $data->bloodGroup->blood_name,
-                'id'        => $data->id,
-                'quantity'        => $data->quantity,
-                'collection_date'        => $data->collection_date,
+        } else {
+            $giveBlood = DonorGivenBlood::where("hospital_details_id", Auth::user()->hostpitalDetails->id)->with('hospitalDetails')->with("users")->with("bloodGroup")->get()->transform(fn($data) => [
+                'hospital_name' => $data->hospitalDetails->hostpital_name,
+                'hospital_city' => $data->hospitalDetails->lgas->stateNames->state,
+                'donor_name' => $data->users->name,
+                'donor_email' => $data->users->email,
+                'blood_group' => $data->bloodGroup->blood_name,
+                'id' => $data->id,
+                'quantity' => $data->quantity,
+                'collection_date' => $data->collection_date,
             ]);
         }
         $users = User::where('id', '!=', Auth::user()->id)->where('role', '=', 3)->where('is_active', 2)->get();
@@ -437,10 +438,10 @@ class HospitalDetailsController extends Controller
 
         $user = DonorGivenBlood::create([
             'hospital_details_id' => Auth::user()->hostpitalDetails->id,
-            'blood_id'             => $request->blood_group,
-            'user_id'           => $request->email,
-            'quantity'          => $request->quantity,
-            'collection_date'   => date("d M, Y"),
+            'blood_id' => $request->blood_group,
+            'user_id' => $request->email,
+            'quantity' => $request->quantity,
+            'collection_date' => date("d M, Y"),
         ]);
         if ($user) {
             return response()->json([

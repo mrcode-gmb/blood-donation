@@ -68,6 +68,7 @@ Route::middleware("auth")->group(function(){
     Route::post("/blood-bank/create/{id}", [BloodInventoryController::class, 'store'])->name('bloodInvertory');
     Route::get("/blood-bank/all", [BloodInventoryController::class, 'index'])->name('bloodInvertory.index');
     Route::get("/blood-bank/usage", [BloodInventoryController::class, 'usageBlood'])->name('bloodInvertory.usageBlood');
+    Route::get("/blood-bank/requested", [BloodInventoryController::class, 'requestedBlood'])->name('bloodInvertory.requestedBlood');
     Route::get("/blood-bank/expired", [BloodInventoryController::class, 'usageExpired'])->name('bloodInvertory.usageExpired');
     Route::post("/buy-need-blood/{id}/{inventId}", [BloodInventoryController::class, 'saveBlood'])->name('bloodInvertory.saveBlood');
     Route::post("/accepted-blood/{id}/{inventId}", [BloodInventoryController::class, 'accepted'])->name('bloodInvertory.accepted');

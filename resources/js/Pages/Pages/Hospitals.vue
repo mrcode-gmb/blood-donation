@@ -119,6 +119,7 @@ const search = (choose) => {
                                         <th>Hospital Location</th>
                                         <th>Hospital email</th>
                                         <th>Hospital GSM</th>
+                                        <th>CSC Certificate</th>
                                         <th>App status</th>
                                         <th>Action</th>
                                     </tr>
@@ -133,6 +134,9 @@ const search = (choose) => {
                                         <td>{{ hospotal.hospital_address }}</td>
                                         <td>{{ hospotal.hospital_email }}</td>
                                         <td>{{ hospotal.hospital_phone }}</td>
+                                        <td>
+                                        <a :href="hospotal.csc_certificate">CSC certificate</a>
+                                        </td>
                                         <td>
                                             <div class="status" v-if="hospotal.is_active == 1"
                                                 @click="openModal(hospotal.id)">
