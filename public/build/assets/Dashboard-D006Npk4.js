@@ -1,0 +1,1 @@
+import{_ as e}from"./AuthenticatedLayout-D55r6U_T.js";import{o as r,c as s,a,u as t,Z as o,m as _,F as c}from"./app-MHH2OR-o.js";const u={__name:"Dashboard",setup(n){return(m,f)=>(r(),s(c,null,[a(t(o),{title:"Dashboard"}),a(_),a(e)],64))}};export{u as default};

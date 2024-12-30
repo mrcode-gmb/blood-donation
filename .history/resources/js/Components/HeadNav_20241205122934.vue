@@ -57,10 +57,10 @@ const closeMobileMenu = () => {
           <header id="header">
             <div class="header-flex">
               <div class="header-left">
-                <h4>Blood Donation</h4>
+                <h4>Farn & Agro Vet Service</h4>
               </div>
               <div class="header-right">
-                <h4>Blood Donation</h4>
+                <h4>Farn & Agro Vet Service</h4>
                 <p>blooddonation.com.ng</p>
               </div>
             </div>
@@ -73,7 +73,7 @@ const closeMobileMenu = () => {
                   src="../../../public/asset/photos/63a5ab75a44bfd09356d456f0fcccced-removebg-preview.png"
                   alt="Logo"
                 />
-                <p>Blood Donation</p>
+                <p>Farn & Agro Vet Service</p>
               </div>
               <div
                 class="mobile-menu mobile-margin"
